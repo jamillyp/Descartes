@@ -1,0 +1,45 @@
+.Cadastro {
+    text-align: center;
+    color: white;
+    align-items: center;
+    
+}
+.cadastrar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 165px;  
+}
+.estilo-cadastro {
+    border-style: none;
+    background-color: #6CB9AA;
+    width: 350px;
+    height: 360px;
+    align-items: center;
+    box-shadow: 0px 2px 4px #352166;
+    border-radius: 10px;
+}
+
+.estilo-cadastro button{
+    width: 310px;
+    height: 38px;
+    background: #352166;
+    border-radius: 10px;
+    color: white;
+    font-size: small;
+}
+
+.estilo-cadastro a{
+    text-decoration: none;
+    text-decoration-style: none;
+    font-size: small;
+}
+.estilo-cadastro input{
+    width: 310px;
+    height: 38px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: small;
+}

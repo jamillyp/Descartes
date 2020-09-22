@@ -1,0 +1,41 @@
+.sobre {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    height: 598px;
+    top: 770px;
+    display: flex;
+    justify-content: space-between;
+    color: #D6692B;
+    font-size: 13.5px;
+    align-items: center;
+}
+.sobre-titulo {
+    position: absolute;
+    left: 11%;
+    width: 80%;
+    top: 770px;
+    justify-content: space-around;
+    text-align: center;
+    color:#D6692B ;
+    
+}
+.h2-azul{
+    color: #352166;
+}
+.sobre h2 {
+    color: #352166;
+}
+.sobre a{
+    text-decoration-style: none;
+    text-decoration: none;
+    list-style: none;
+    color:#D6692B ;
+}
+.texto-sobre {
+    margin-right: 20px;
+}
+.texto-sobre img {
+    width: 40px;
+    height: 40px;
+}

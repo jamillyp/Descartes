@@ -1,0 +1,80 @@
+.loja {
+    position: absolute;
+    width: 81%;
+    height: 600px;
+    left: 10%;
+    top: 1900px;
+    text-align: center;
+    color: #352166;
+}
+.titulos-loja h1{
+    color:#D6692B;
+}
+.titulos-loja {
+    color: #352166;
+}
+.titulos-loja img{
+    width: 2%;
+    height: 1%;
+    margin-left: 40px;
+}
+.barra-pesquisa {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    left: 10%;
+    width: 100%;
+    height: 138px;
+    background: #EDCB59;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    text-align: left;
+}
+.loja select {
+    width: 317px;
+    height: 48px;
+    left: 345px;
+    top: 251px;
+    background: #F1F1F1;
+    border-radius: 5px;
+    border: none;
+    color: #352166;
+}
+.loja button{
+    width: 150px;
+    height: 48px;
+    left: 1425px;
+    top: 251px;
+    background: #352166;
+    border-radius: 10px;
+    color: white;
+    border: none;
+}
+.loja-visual {
+    
+    display: flex;
+    justify-content: space-between;
+    color: #352166;
+    margin-top: 30px;
+}
+
+.categorias a,li {
+    list-style: none;
+    text-decoration: none;
+    color:#352166 ;
+}
+.categorias img{
+    width: 8%;
+    height: 8%;
+}
+.categorias {
+    background-color: #F1F1F1;
+    border-radius: 10px;
+    width: 30%;
+}
+.ofertas img {
+    margin-top: 10px;
+    width: 95%;
+    height: 100%;
+    margin-left: 40px;
+}

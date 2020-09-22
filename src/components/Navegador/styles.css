@@ -1,0 +1,54 @@
+
+.Navegador-principal{
+    position: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+    width: 100%;
+    height: 80px;
+    background: #F2F2F2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+}
+.Navegador .ul {
+    list-style: none;
+    list-style-type: none; 
+    text-decoration: none;
+    display: flex;
+}
+#logo {
+    width: 124px;
+    height: 35px;
+    margin-left: 70px;    
+}
+.Nav-icones {
+    margin-right: 60px;
+}
+.Nav-icones a{
+    margin-left: 20px;
+    text-decoration: none;
+    font-style: normal;
+    font-size: 18px;
+}
+.mapa{
+    width: 20.07px;
+    height: 25px;
+}
+.sacola{
+    width: 24.59px;
+    height: 24.30px;
+}
+.perfil{
+    width: 24.01px;
+    height: 24.14px;
+}
+.favoritos{
+    width: 25px;
+    height: 24px;
+}
+.notificacao{
+    width: 25px;
+    height: 25px;
+}

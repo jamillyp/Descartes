@@ -1,0 +1,45 @@
+.pagina3 {
+    position: absolute;
+    left: 10%;
+    width: 81%;
+    height: 732px;
+    top: 1350px;
+    text-align: center;
+
+
+}
+.cards{
+    display: flex;
+    align-items: baseline;
+    text-align: left;
+    justify-content: space-between;
+}
+.fundo {
+    width: 300px;
+    height: 400px;
+    left: 255px;
+    top: 1711px;
+    background: #352166;
+    border-radius: 10px;
+    border: none;
+}
+.cards a{
+    text-decoration: none;
+    color: #D6692B;
+    font-size: 13.5px;
+    margin-left: 230px;
+}
+.cards p{
+    color: white;
+    text-align: left;
+    margin-left: 20px;
+}
+.cards h3{
+    color: #352166;
+}
+.titulo h1 {
+    color: #D6692B;
+}
+.cards img{
+    width: 100%;
+}
