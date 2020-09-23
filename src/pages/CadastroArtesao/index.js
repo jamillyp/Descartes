@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './styles.css';
 
 export class CadastroArtesao extends Component {
+
   render() {
     return (
       <div className="cadastroArtesao">

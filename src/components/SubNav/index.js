@@ -15,7 +15,7 @@ export default class subNav extends Component {
                         </ul>
                     </p>
                     <p className="p2">Bem vindo! <Link to="/iniciarSecao">Login</Link>
-                    <Link to="/cadastrarArtesao">Cadastre-se</Link></p>
+                    <Link to="/cadastrarArtesao" >Cadastre-se</Link></p>
                 </nav>
             </div>
         )

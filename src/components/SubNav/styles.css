@@ -24,15 +24,14 @@
     color: #D6692B;
 }
 .p1 li{
-    margin-left: 20px;
+    margin-left: 15px;
     font-weight: bold;
 }
 .p2 a {
     margin-left: 10px;
-    margin-right: 40px;
+    margin-right: 20px;
     font-weight: bold;
 }
-
 .Navegador-menu a:hover {
     background:  #f1d168;
 }
