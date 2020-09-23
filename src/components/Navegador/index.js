@@ -30,7 +30,7 @@ class Navegador extends React.Component {
               <li>
                 <Link to={"/iniciarSecao"}>
                   <img src={perfil} alt="perfil" className="perfil" />
-                  Iniciar Seção
+                  Minha conta
                 </Link>
               </li>
               <li>

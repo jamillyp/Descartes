@@ -1,23 +1,23 @@
-.idEmpresa {
+.idArtesao {
     height: 800px;
     
 }
-.link-pfisica a {
+.link-empresa a {
     text-decoration-style: none;
     color: #D6692B;
     font-weight: bolder;
     display: flex;
     position: absolute;
     width: 70%;
-    left: 56%;
+    left: 58.2%;
     position: absolute;
     top: 145px;
 }
-.Empresa p {
+.Artesao p {
     text-align: left;
     margin-left: 50px;
 }
-.Empresa {
+.Artesao {
     background-color: #6CB9AA;
     align-items: center;
     text-align: center;
@@ -27,16 +27,16 @@
     left: 23%;
     position: absolute;
     top: 180px;
-    height: 670px;
+    height: 620px;
     border-radius: 10px;
 }
-.Empresa h2{
+.Artesao h2{
     color: #352166;
 }
-.Empresa p {
+.Artesao p {
     font-size: 11px;
 }
-.enviarEmpresa {
+.botaoArtesao {
     width: 18%;
     height: 5%;
     background: #352166;
@@ -72,6 +72,6 @@
     margin-left: 5px;
     margin-right: 5px;
 }
-.cadastroEmpresa input {
+.cadastroArtesao input {
     font-size: small;
 }

@@ -3,7 +3,10 @@ import { Switch, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import CadastroEmpresa from "../pages/CadastroEmpresa";
 import iniciarSecao from "../pages/IniciarSecao";
-import perfilEmpresa from "../pages/PerfilEmpresa"
+import perfilEmpresa from "../pages/PerfilEmpresa";
+import CadastroArtesao from "../pages/CadastroArtesao";
+import perfilArtesao from "../pages/PerfilArtesao";
+import empresaPerfil from "../pages/EmpresaPerfil";
 
 export default class Routes extends Component {
   render() {
@@ -11,8 +14,12 @@ export default class Routes extends Component {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/iniciarSecao" component={iniciarSecao} />
-        <Route path="/cadastrar" component={CadastroEmpresa} />
-        <Route path="/perfilEmpresa" component={perfilEmpresa} />
+        <Route path="/cadastrarEmpresa" component={CadastroEmpresa} />
+        <Route path="/cadastrarArtesao" component={CadastroArtesao} />
+        <Route path="/idEmpresa" component={perfilEmpresa} />
+        <Route path="/perfilArtesao" component={perfilArtesao} />
+        <Route path="/empresa" component={empresaPerfil} />
+        
       </Switch>
     );
   }

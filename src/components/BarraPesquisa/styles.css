@@ -42,6 +42,12 @@
     background: #F1F1F1;
     box-shadow: inset 0px 4px 4px 1px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
+    
+    /*-webkit-appearance: none;
+    -moz-appearance: none; 
+    appearance: none; 
+    background: url("../../assets/svg/botao-material.svg") no-repeat #eeeeee; Imagem de fundo (Seta) */
+    background-position: 198px center;  /*Posição da imagem do background*/
 
 }
 .pesquisa-pg1 button{

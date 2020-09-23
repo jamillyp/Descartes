@@ -15,22 +15,18 @@ const logarFunc = props => {
                         <h2>Iniciar Seção</h2>
                         <input
                         type="text" 
-                        name="email-cpf"
-                        placeholder="e-mail ou CPF" />
+                        name="email"
+                        placeholder="    E-mail" />
                         <br />
                         <input
                         type="numero" 
                         name="senha"
-                        placeholder="senha" />
-                        <br />
+                        placeholder="     Senha" />
+                        <br /><br />
                         
                         <Link to="/esqueciSenha">Esqueci minha senha</Link><br /><br />
 
-                        <button type="submit"><strong>Entrar</strong></button><br />
-
-                        <p>ou</p>
-
-                        <Link to='/cadastrar'><button><strong>Quero me cadastrar</strong></button></Link>
+                        <button type="submit">Entrar</button><br />
                     </form>
                 </div>
                 <Footer></Footer>

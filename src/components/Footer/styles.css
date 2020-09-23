@@ -1,5 +1,4 @@
 .footer {
-    position: absolute;
     height: 190px;
     text-align: center;
     background: #6CB9AA;
@@ -12,7 +11,12 @@
     margin: auto;
     bottom: 0;
     color: #352166;
-    top: 5000px;
+    flex-shrink: 0px;
+    position: absolute;
+    top: 4700px;
+    position: absolute;
+    
+
 }
 .footer a{
     text-decoration: none;

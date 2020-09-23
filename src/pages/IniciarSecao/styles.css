@@ -1,6 +1,6 @@
 .Cadastro {
     text-align: center;
-    color: white;
+    color:  #352166;
     align-items: center;
     
 }
@@ -14,26 +14,28 @@
 .estilo-cadastro {
     border-style: none;
     background-color: #6CB9AA;
-    width: 350px;
-    height: 360px;
+    width: 400px;
+    height: 300px;
     align-items: center;
     box-shadow: 0px 2px 4px #352166;
     border-radius: 10px;
 }
 
 .estilo-cadastro button{
-    width: 310px;
-    height: 38px;
+    width: 28%;
+    height: 12%;
     background: #352166;
     border-radius: 10px;
     color: white;
     font-size: small;
+    border: none;
 }
 
 .estilo-cadastro a{
-    text-decoration: none;
     text-decoration-style: none;
     font-size: small;
+    margin-left: 44%;
+    color: white;
 }
 .estilo-cadastro input{
     width: 310px;

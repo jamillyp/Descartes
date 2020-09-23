@@ -1,45 +1,126 @@
 import React, { Component } from "react";
-import Navegador from "../../components/Navegador";
-import subNav from "../../components/SubNav";
+import { Link } from 'react-router-dom';
+import './styles.css';
 
 export class CadastroArtesao extends Component {
   render() {
     return (
-      <div className="cadastroEmpresa">
-        <Navegador />
-        <subNav />
-        <div className="idEmpresa">
-          <form method="POST">
-            <fieldset className="Artesão">
-              <button type="submit">Empresa</button>
-              <button type="submit">Artesão</button>
-              <br />
-              <input type="text" placeholder="Nome completo*"></input>
-              <br />
-              <input type="text" placeholder="E-mail*"></input>
-              <br />
-              <input type="text" placeholder="CPF*"></input>
-              <br />
-              <input type="text" placeholder="Data de Nascimento"></input>
-              <br />
-              <input type="text" placeholder="Endereço"></input>
-              <br />
-              <input type="text" placeholder="Número*"></input>
-              <input type="text" placeholder="Bairro*"></input>
-              <br />
-              <input type="text" placeholder="Telefone 1*"></input>
-              <br />
-              <input type="text" placeholder="Telefone 2*"></input>
-              <br />
-              <p>
-                Ao clicar em "Enviar" você concorda com os Termos e Condições
+      <div className="cadastroArtesao">
+        <div className="idArtesao">
+
+            <div className="link-empresa">
+
+              <Link to="/CadastrarEmpresa">Quero criar cadastro empresa</Link>
+              
+            </div>
+
+            <form method="POST">
+              <fieldset className="Artesao">
                 <br />
-                do Descartes e confirma que leu a política de privacidade.
-              </p>
-              <button type="submit">Enviar</button>
-            </fieldset>
-          </form>
-        </div>
+                <h2>Cadastre seus dados</h2><br />
+                <p>*Todos os campos com asterisco o preenchimento é obrigatório.</p>
+                <input
+                  type="text"
+                  Component="input"
+                  placeholder="Nome Completo*"
+                  className="inputMaior"
+                />
+                <br />
+                <input
+                  type="text"
+                  Component="input"
+                  placeholder="CPF*"
+                  className="inputMenor"
+                />
+                <input
+                  type="text"
+                  Component="input"
+                  placeholder="Data de Nascimento*"
+                  className="inputMenor"
+                />
+                <br />
+                <input
+                  type="text"
+                  Component="input"
+                  placeholder="Endereço*"
+                  className="inputMaior"
+                />
+                <br />
+                <input
+                  type="text"
+                  Component="input"
+                  placeholder="Nº*"
+                  className="inputMenor1"
+                />
+                <input
+                  type="text"
+                  Component="input"
+                  placeholder="Complemento*"
+                  className="inputMenor1"
+                />
+                <input
+                  type="text"
+                  Component="input"
+                  placeholder="CEP*"
+                  className="inputMenor1"
+                />
+                <input
+                  type="text"
+                  Component="input"
+                  placeholder="Cidade/UF*"
+                  className="inputMenor1"
+                />
+                <br />
+                <input
+                  type="text"
+                  Component="input"
+                  placeholder="Telefone 1*"
+                  className="inputMenor"
+                />
+                <input
+                  type="text"
+                  Component="input"
+                  placeholder="Telefone 2*"
+                  className="inputMenor"
+                />
+                <br /> 
+                <input
+                  type="text"
+                  Component="input"
+                  placeholder="E-mail*"
+                  className="inputMaior"
+                /><br />
+                <input
+                  type="text"
+                  Component="input"
+                  placeholder="Senha*"
+                  className="inputMenor"
+                />
+                <input
+                  type="text"
+                  Component="input"
+                  placeholder="Repetir senha*"
+                  className="inputMenor"
+                />
+                <br />
+                <br />
+                <p>
+                  Ao clicar em "Enviar", você concorda com os{" "}
+                  <strong>
+                    Termos e Condições Gerais
+                    do Descartes 
+                  </strong>{" "}
+                  e confirma que leu a 
+                  <strong> Política de <br /> 
+                  Privacidade.</strong>
+                </p><br />
+                <button type="submit" className="botaoArtesao">
+                  Cadastrar
+                </button>
+              </fieldset>
+            </form>
+            </div>
+        
       </div>
     );
   }

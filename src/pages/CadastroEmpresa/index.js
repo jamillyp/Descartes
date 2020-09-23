@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import subNav from "../../components/SubNav";
 import "./styles.css";
+import { Link } from 'react-router-dom';
 
 export class CadastroEmpresa extends Component {
 
@@ -8,21 +9,20 @@ export class CadastroEmpresa extends Component {
   render() {
     return (
       <div className="cadastroEmpresa">
-        <subNav />
 
         <div className="idEmpresa">
+
+          <div className="link-pfisica">
+
+            <Link to="/CadastrarArtesao">Quero criar cadastro pessoa física</Link>
+            
+          </div>
+
           <form method="POST">
             <fieldset className="Empresa">
               <br />
-              <h2>Cadastro</h2><br />
-              <button type="submit" className="botaoSeletor">
-                Empresa
-              </button>
-              <button type="submit" className="botaoSeletor">
-                Artesão
-              </button>
-              <br />
-
+              <h2>Cadastre os dados da empresa</h2><br />
+              <p>*Todos os campos com asterisco o preenchimento é obrigatório.</p>
               <input
                 type="text"
                 Component="input"
@@ -34,14 +34,13 @@ export class CadastroEmpresa extends Component {
                 type="text"
                 Component="input"
                 placeholder="Razão Social*"
-                className="inputMaior"
+                className="inputMenor"
               />
-              <br />
               <input
                 type="text"
                 Component="input"
                 placeholder="CNPJ*"
-                className="inputMaior"
+                className="inputMenor"
               />
               <br />
               <input
@@ -60,7 +59,13 @@ export class CadastroEmpresa extends Component {
               <input
                 type="text"
                 Component="input"
-                placeholder="Bairro*"
+                placeholder="Complemento*"
+                className="inputMenor1"
+              />
+              <input
+                type="text"
+                Component="input"
+                placeholder="CEP*"
                 className="inputMenor1"
               />
               <input
@@ -82,7 +87,13 @@ export class CadastroEmpresa extends Component {
                 placeholder="Telefone 2*"
                 className="inputMenor"
               />
-              <br />
+              <br /> 
+              <input
+                type="text"
+                Component="input"
+                placeholder="Site da empresa*"
+                className="inputMaior"
+              /><br />
               <input
                 type="text"
                 Component="input"
@@ -104,16 +115,17 @@ export class CadastroEmpresa extends Component {
               <br />
               <br />
               <p>
-                Ao clicar em "Enviar" você concorda com os{" "}
+                Ao clicar em "Enviar", você concorda com os{" "}
                 <strong>
-                  Termos e Condições
-                  <br />
-                  do Descartes
+                  Termos e Condições Gerais
+                  do Descartes 
                 </strong>{" "}
-                e confirma que leu a <strong>Política de Privacidade.</strong>
+                e confirma que leu a 
+                <strong> Política de <br /> 
+                Privacidade.</strong>
               </p><br />
               <button type="submit" className="enviarEmpresa">
-                Enviar
+                Cadastrar
               </button>
             </fieldset>
           </form>
