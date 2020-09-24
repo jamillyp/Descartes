@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+
 import { Provider } from 'react-redux';
-import { applyMiddleware, createStore } from 'redux';
-import rootReducer from './Redux/reducers';
-import ReduxThunk from 'redux-thunk';
+import { ReactReduxFirebaseProvider} from 'react-redux-firebase';
+
+import { store, rrfProps } from './store/storeConfig';
 
 ReactDOM.render(
-  <Provider store={createStore(rootReducer, {}, applyMiddleware(ReduxThunk))}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Provider>,
+  <Provider store={store}>
+  <ReactReduxFirebaseProvider {...rrfProps}>
+    <App />
+  </ReactReduxFirebaseProvider>
+</Provider>,
   document.getElementById('root')
 );

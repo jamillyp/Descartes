@@ -41,8 +41,9 @@ export class perfilEmpresa extends Component {
                     <img src="" /><p>{this.telefone1}</p>
                     <img src="" /><p>{this.email}</p>
                     <img src="" /><p>{this.site}</p>
+
+                    
                 </div>
-                
             </div>
         )
     }

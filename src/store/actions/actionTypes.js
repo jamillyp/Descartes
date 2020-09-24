@@ -1,0 +1,2 @@
+export const SIGNUP_SUCCESS = 'CADASTRO_SUCESSO'
+export const SIGNUP_ERROR = 'CADASTRO_ERRO' 
