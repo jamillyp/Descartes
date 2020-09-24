@@ -10,6 +10,9 @@ export default function (state = INITIAL_STATE, action) {
         ...state,
         Mensagem: "Usuário cadastrado com sucesso!",
         MensagemEmpresa: "Empresa cadastrada com sucesso!",
-        MensagemLogin: "Login realizado com sucesso!"
+        MensagemLogin: "Login realizado com sucesso!",
+        loginInicial: 'Login',
+        loginSome: '',
     }
+
 }

@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
 import './styles.css';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-export default class subNav extends Component {
+class subNav extends Component {
+
+    LoginAltera(e){
+        alert('Está sendo redirecionado para o Iniciar Seção')
+        if (e.onClick == true) {
+            this.props.loginInicial = this.props.clicouLogin
+        }
+    }
+
     render() {
         return (
             <div>
@@ -14,7 +23,7 @@ export default class subNav extends Component {
                             <li><a href="" >Loja</a></li>
                         </ul>
                     </p>
-                    <p className="p2">Bem vindo! <Link to="/iniciarSecao">Login</Link>
+                    <p className="p2">Bem vindo! <Link to="/iniciarSecao" onClick={this.LoginAltera}>{this.props.loginAparece}</Link>
                     <Link to="/cadastrarArtesao" >Cadastre-se</Link></p>
                 </nav>
             </div>
@@ -22,3 +31,11 @@ export default class subNav extends Component {
     }
 }
 
+function mapStateToProps(state) {
+    return {
+        loginAparece: state.authReducer.loginInicial,
+        clicouLogin: state.authReducer.loginSome
+    }
+}
+
+export default connect(mapStateToProps)(subNav);
