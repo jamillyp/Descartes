@@ -1,11 +1,12 @@
-import { createStore, applyMiddleware } from 'redux'
-import reduxThunk from 'redux-thunk'
+import { createStore, combineReducers } from 'redux'
+import authActionCreator from './reducers/authReducer'
 
-import reducer from '../store/reducers'
+const reducers = combineReducers( {
+   authReducer: authActionCreator
+})
 
-const store = createStore(
-    reducer,
-    applyMiddleware(reduxThunk)
-)
+function storeConfig(){
+    return createStore(reducers)
+}
 
-export { store }
+export default storeConfig;

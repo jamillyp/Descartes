@@ -4,14 +4,6 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 class subNav extends Component {
-
-    LoginAltera(e){
-        alert('Está sendo redirecionado para o Iniciar Seção')
-        if (e.onClick == true) {
-            this.props.loginInicial = this.props.clicouLogin
-        }
-    }
-
     render() {
         return (
             <div>
@@ -23,7 +15,7 @@ class subNav extends Component {
                             <li><a href="" >Loja</a></li>
                         </ul>
                     </p>
-                    <p className="p2">Bem vindo! <Link to="/iniciarSecao" onClick={this.LoginAltera}>{this.props.loginAparece}</Link>
+                    <p className="p2">Bem vindo! <Link to="/iniciarSecao" >{this.props.loginAparece}</Link>
                     <Link to="/cadastrarArtesao" >Cadastre-se</Link></p>
                 </nav>
             </div>
@@ -33,8 +25,7 @@ class subNav extends Component {
 
 function mapStateToProps(state) {
     return {
-        loginAparece: state.authReducer.loginInicial,
-        clicouLogin: state.authReducer.loginSome
+        loginAparece: state.authReducer.loginInicial
     }
 }
 

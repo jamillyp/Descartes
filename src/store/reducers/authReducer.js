@@ -1,5 +1,3 @@
-import { CADASTRO_SUCESSO, CADASTRO_ERRO } from '../actions/actionTypes';
-
 const INITIAL_STATE = {
     authMsg: null,
     user: '',

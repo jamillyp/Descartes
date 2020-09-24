@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 import { Provider } from 'react-redux';
-
-import { store } from './store/storeConfig';
+import storeConfig from './store/storeConfig';
 
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={storeConfig()}>
     <App />
 </Provider>,
   document.getElementById('root')

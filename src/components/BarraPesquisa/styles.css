@@ -41,6 +41,7 @@
     border: none;
     background: #F1F1F1;
     box-shadow: inset 0px 4px 4px 1px rgba(0, 0, 0, 0.15);
+    color:#352166;
     border-radius: 5px;
     
     /*-webkit-appearance: none;
@@ -57,4 +58,10 @@
     border-radius: 10px;
     color: white;
     border: none;
+}
+option {
+    background-color: #F1F1F1;
+}
+option :hover{
+    color:#6CB9AA;
 }
