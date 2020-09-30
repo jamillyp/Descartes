@@ -1,2 +1,0 @@
-export const ALTERAR_LOGIN = 'ALTERAR_LOGIN'
-
