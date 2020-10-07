@@ -1,0 +1,89 @@
+.PrimeiroBloco {
+    display: inline-flex;
+    float: left;
+    margin: 50px auto 50px 150px;
+}
+
+.BlocoEsquerdo {
+    display: inline-flex;
+    background-color: #352166;
+    width: 60%;
+    height: auto;
+    padding: 40px;
+    border-radius: 10px 0 0 10px;
+}
+
+.FotoEmpresa {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 20px 30px 0 20px;
+}
+
+img#LogoEmpresa {
+    width: 220px;
+    height: 220px;
+    border-radius: 0 10px 0 0;
+    background-color: rgb(131, 131, 131);
+}
+
+.DadosEmpresa h3 {
+    margin: 0px 0 20px 05px;
+    padding-top: 20px;
+    color: #f1f1f1;
+}
+
+.Dados {
+    margin-top: 15px;
+}
+
+.DadosEmpresa p {
+    margin: 10px 10px 5px 10px;
+    color: #f1f1f1;
+    font-size: 14px;
+    width: 100%;
+}
+
+img#IconPerfilEmp {
+    margin: 0 10px 0 0;
+}
+
+.BotaoEditar {
+    margin-top: 320px;
+    padding-left: 82px;
+}
+
+button#BotaoEditPerfil {
+    padding: 5px;
+    border-radius: 5px;
+    border: transparent;
+    background-color: transparent;
+    color: #f1f1f1;
+}
+
+.BlocoDireita {
+    background-color: #48B9A3;
+    width: 30%;
+    height: auto;
+    padding: 30px;
+    border-radius: 0 10px 10px 0;
+}
+
+.CabecalhoSelos {
+    display: inline-flex;
+    float: left;
+    color:  #352166;
+    margin-left: 10px;
+}
+
+.CabecalhoSelos h2 {
+    width: 100px;
+    margin: 10px 0 0 0;
+}
+
+img#TipoSelo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgb(131, 131, 131);
+    margin: 0 0px 30px 130px;
+}
