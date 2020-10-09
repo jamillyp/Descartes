@@ -7,7 +7,8 @@ export const fetchCadastrarMaterial = (dadosMaterial) => {
     return (dispatch) => {
         console.log('--XX', dadosMaterial)
         // usar rota '/cadastrarMaterial' no back
-        axios.post('/cadastrarMaterial', dadosMaterial)
+        const idEmpresa = window.localStorage.getItem('userId')
+        axios.post('/empresas/' + idEmpresa + '/cadastrarMaterial', dadosMaterial)
             .then((dados) => {
                 console.log(dados)
                 dispatch(cadastrarMaterial(dados.data))

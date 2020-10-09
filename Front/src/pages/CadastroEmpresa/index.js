@@ -184,10 +184,10 @@ class CadastroEmpresa extends Component {
               
               <button type="submit" value="cadastrar" className="enviarEmpresa">
                 Cadastrar
-              </button>
+              </button><br /><br />
+              <Link to="/perfilEmpresa">Ver Perfil</Link>
             </fieldset>
           </form>
-          <Link to="/perfilEmpresa"><button >perfil</button></Link>
         </div>
       </div>
     );

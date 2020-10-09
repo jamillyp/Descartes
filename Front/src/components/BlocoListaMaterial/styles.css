@@ -1,0 +1,109 @@
+.TerceiroBloco {
+    margin-left: 150px;
+    position: absolute;
+    background-color:#6CB9AA;
+    margin: 460px 0 0px 520px;
+    border-radius: 10px;
+    width: 52.5%;
+    top: 168px;
+}
+
+.BlocoVerde {
+    margin: 30px;
+    padding-bottom: auto;
+}
+
+p#DivisoriaTabel {
+    width: 640px;
+    border-top: 3px solid #352166;
+}
+
+.TabelaProdCadastrados {
+    margin-top: 20px;
+}
+
+#TituloTabela tr th {
+    color: #352166;
+    padding: 5px;
+}
+
+th#th1 {
+    width: 10px;
+}
+
+th#th2 {
+    width: 249px;
+}
+
+th#th3 {
+    width: 80px;
+}
+
+th#th4 {
+    width: 80px;
+}
+
+th#th5 {
+    width: 40px;
+}
+
+.TabelaListaProd1 {
+    width: 650px;
+}
+
+.TabelaListaProd2 {
+    width: 650px;
+    border: 1.5px solid #352166;
+    border-radius: 5px;
+}
+
+td#td1 {
+    width: 30px;
+}
+
+td#td2 {
+    width: 289px;
+}
+
+td#td3 {
+    width: 10px;
+}
+
+td#td4 {
+    width: 100px;
+}
+
+td#td5 {
+    width: 100px;
+}
+
+input#Check1 {
+    margin-left: 35px;
+}
+
+input#Check2 {
+    margin-left: 35px;
+}
+
+input#Check3 {
+    margin-left: 60px;
+}
+
+.ListagemTabela {
+    width: 800px;
+    background-color: rgb(202, 202, 202);
+}
+
+.ListagemTabela tr td{
+    padding: 5px;
+}
+
+button#Atualizar {
+    padding: 6px 15px 6px 15px;
+    border-radius: 5px;
+    background-color: #352166;
+    border: transparent;
+    color: #f1f1f1;
+    margin-top: 115px;
+    margin-left: 560px;
+}

@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
         <BrowserRouter>
-          <Navegador />
-          <Nav />         
+          <Nav /> 
+          <Navegador />        
           <Routes />
           <FooterContainer /> 
         </BrowserRouter>  

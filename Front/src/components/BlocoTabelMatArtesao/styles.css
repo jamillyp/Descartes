@@ -1,0 +1,78 @@
+.BlocoMateriais {
+    height: 300px;
+}
+.BlFundo2 {
+    position: absolute;
+    width: 1230px;
+    height: 330px;
+    margin-left: 145px;
+    background-color: #6CB9AA;
+    padding-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25);
+}
+.CabecalhoBlMateriais h1 {
+    margin: 5px 0 5px 0;
+    color: #352166;
+    margin-left: 15px;
+    font-size: 15pt;
+}
+.CabecalhoBlMateriais #DivisoriaTabel {
+    width: 1200px;
+    margin-left: 15px;
+}
+.TabelaListaTitle {
+    margin: 10px 0px 5px 25px;
+    color: #352166;
+}
+.TitleTabelaMateriais #th3{
+    padding-left: 400px;
+}
+.TitleTabelaMateriais #th4{
+    padding-left: 165px;
+}
+.TitleTabelaMateriais #th5{
+    padding-left: 100px;
+}
+.TabelaListaProdVisu {
+    margin-left: 20px;
+    border: 1.5px solid #352166;
+    border-radius: 5px;
+    width: 1180px;
+}
+.ListagemMateriaisTabela {
+    background-color: rgb(202, 202, 202);
+}
+.ListaMateriais #tdM1 {
+    width: 50px;
+    padding: 5px 5px 5px 10px;
+}
+.ListaMateriais #tdM2 {
+    width: 600px;
+    padding-left: 10px;
+}
+.ListaMateriais #tdM3 {
+    width: 100px;
+    padding-left: 10px;
+}
+.ListaMateriais #tdM4 {
+    padding-top: 5px;
+    padding-left: 10px;
+    display: inline-flex;
+}
+.ListaMateriais #tdM4 p {
+    margin-left: 30px;
+}
+.ListaMateriais #tdM5 {
+    width: 80px;
+}
+#AtualizarSolicitacao {
+    padding: 6px 15px 6px 15px;
+    border-radius: 5px;
+    background-color: #352166;
+    border: transparent;
+    color: #f1f1f1;
+    margin-top: 115px;
+    margin-left: 1110px;
+    box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25);
+}

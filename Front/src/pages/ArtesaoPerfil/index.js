@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Pesquisa from "../../components/BarraPesquisa";
 import './styles.css';
 import { Link } from 'react-router-dom';
-import mapaG from '../../assets/svg/mapa1.svg';
+import { connect } from 'react-redux';
 
-export default class paginaArtesao extends Component {
+class paginaArtesao extends Component {
     render() {
         return (
             <div className="Artesao-Perfil">
@@ -19,16 +19,16 @@ export default class paginaArtesao extends Component {
 
                         <table>
                             <tr>
-                                <td>Empresa A <Link to="">Ver Empresa</Link></td>
+                                <td>Empresa A <Link to="">{this.props.material[0].tipoMaterial}</Link></td>
                             </tr>
                             <tr>
-                                <td>Empresa B <Link to="">Ver Empresa</Link></td>
+                                <td>Empresa B <Link to="">{this.props.material[0].qtdTam}</Link></td>
                             </tr>
                             <tr>
-                                <td>Empresa C <Link to="">Ver Empresa</Link></td>
+                                <td>Empresa C <Link to="">{this.props.material[0].disponibilidade}</Link></td>
                             </tr>
                             <tr>
-                                <td>Empresa D <Link to="">Ver Empresa</Link></td>
+                                <td>Empresa D <Link to="">{this.props.material[0].horario}</Link></td>
                             </tr>
                         </table>
 
@@ -41,4 +41,13 @@ export default class paginaArtesao extends Component {
         )
     }
 }
+
+function mapStateToProps(state) {
+    console.log('PE----',state)
+        return {
+            material: state.materialReducer
+        }
+}
+
+export default connect(mapStateToProps)(paginaArtesao);
 

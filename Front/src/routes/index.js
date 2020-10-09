@@ -6,6 +6,7 @@ import iniciarSecao from "../pages/IniciarSecao";
 import CadastroArtesao from "../pages/CadastroArtesao";
 import perfilArtesao from "../pages/ArtesaoPerfil";
 import empresaPerfil from "../pages/EmpresaPerfil";
+import PerfilEmpVisualizar from "../pages/PerfilEmpVisualizar";
 
 export default class Routes extends Component {
   render() {
@@ -17,6 +18,7 @@ export default class Routes extends Component {
         <Route path="/cadastrarArtesao" component={CadastroArtesao} />
         <Route path="/perfilArtesao" component={perfilArtesao} />
         <Route path="/perfilEmpresa" component={empresaPerfil} />
+        <Route path="/perfilEmpresaVisualizacao" component={PerfilEmpVisualizar} />
       </Switch>
     );
   }

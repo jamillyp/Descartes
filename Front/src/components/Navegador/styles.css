@@ -1,6 +1,5 @@
-
 .Navegador-principal{
-    position: inherit;
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,6 +9,7 @@
     height: 80px;
     background: #F2F2F2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    top: 0;
     
 }
 .Navegador .ul {
@@ -21,10 +21,11 @@
 #logo {
     width: 124px;
     height: 35px;
-    margin-left: 70px;    
+    margin-left: 150px;    
 }
 .Nav-icones {
-    margin-right: 60px;
+    margin-top: 15px;
+    margin-right: 150px;
 }
 .Nav-icones a{
     margin-left: 20px;
@@ -32,23 +33,21 @@
     font-style: normal;
     font-size: 18px;
 }
+.Nav-icones img {
+    margin: 0 8px 0;
+}
 .mapa{
-    width: 20.07px;
-    height: 25px;
+    width: 16px;
 }
 .sacola{
-    width: 24.59px;
-    height: 24.30px;
+    width: 20px;
 }
 .perfil{
-    width: 24.01px;
-    height: 24.14px;
+    width: 20px;
 }
 .favoritos{
-    width: 25px;
-    height: 24px;
+    width: 20px;
 }
 .notificacao{
-    width: 25px;
-    height: 25px;
+    width: 20px;
 }
