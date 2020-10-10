@@ -5,11 +5,11 @@ export const cadastrarEmpresa = createAction('CADASTRAR_NOVA_EMPRESA')
 
 export const fetchCadastrarEmpresa = (dadosEmpresa) => {
     return (dispatch) => {
-        // usar rota '/cadastrarEmpresa' no back
+        // usar rota '/empresas/cadastrarEmpresa' no back
         console.log('ANTES ----')
         axios.post('/empresas/cadastrarEmpresa', dadosEmpresa)
             .then((dados) => {
-                console.log('Cdastro---', dados)
+                console.log('Cadastro---', dados)
                 window.localStorage.setItem('userId', dados.data._id)
                 dispatch(cadastrarEmpresa(dados.data))
             })

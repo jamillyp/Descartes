@@ -28,8 +28,8 @@ class listaMaterial extends Component {
                             <tbody className='ListagemTabela'>
                                 <tr id="lista">
                                     <td id='td1'>001</td>
-                                    <td id='td2'>{this.props.material}</td>
-                                    <td id='td3'></td>
+                                    <td id='td2'>Plástico</td>
+                                    <td id='td3'>200m</td>
                                     <td id='td4'><input id="Check1" type="checkbox" /></td>
                                     <td id='td5'><input id="Check2" type="checkbox" /></td>
                                     <td id='td6'><input id="Check3" type="checkbox" /></td>
@@ -55,7 +55,7 @@ class listaMaterial extends Component {
 function mapStateToProps(state) {
     console.log('PE----',state)
         return {
-            material: state.EmpLogadaReducer.materiais.tipoMaterial
+            material: state.EmpLogadaReducer
         }
 }
 

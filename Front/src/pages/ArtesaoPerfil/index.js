@@ -19,16 +19,16 @@ class paginaArtesao extends Component {
 
                         <table>
                             <tr>
-                                <td>Empresa A <Link to="">{this.props.material[0].tipoMaterial}</Link></td>
+                                <td>Empresa A <Link to="/perfilEmpresaVisualizacao">ver mais</Link></td>
                             </tr>
                             <tr>
-                                <td>Empresa B <Link to="">{this.props.material[0].qtdTam}</Link></td>
+                                <td>Empresa B <Link to="/perfilEmpresaVisualizacao">ver mais</Link></td>
                             </tr>
                             <tr>
-                                <td>Empresa C <Link to="">{this.props.material[0].disponibilidade}</Link></td>
+                                <td>Empresa C <Link to="/perfilEmpresaVisualizacao">ver mais</Link></td>
                             </tr>
                             <tr>
-                                <td>Empresa D <Link to="">{this.props.material[0].horario}</Link></td>
+                                <td>Empresa D <Link to="/perfilEmpresaVisualizacao">ver mais</Link></td>
                             </tr>
                         </table>
 
@@ -45,7 +45,7 @@ class paginaArtesao extends Component {
 function mapStateToProps(state) {
     console.log('PE----',state)
         return {
-            material: state.materialReducer
+            material: state.empresaReducer
         }
 }
 

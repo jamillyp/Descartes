@@ -83,7 +83,7 @@ class BlocoAddMaterial extends React.Component{
 }
 function mapStateToProps(state) {
     return {
-        id: state.BlocoAddMaterial
+        material: state.EmpLogadaReducer.materiais
     }
 }
   

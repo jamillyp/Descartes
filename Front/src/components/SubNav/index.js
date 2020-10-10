@@ -19,7 +19,7 @@ class subNav extends Component {
                     <p className="p2">Bem vindo! 
                     {
                         this.props.empresaNome ?
-                        <span> {this.props.empresaNome}</span> :
+                        <span> {this.props.empresaNome} </span> :
                         <>
                             {
                                 (this.props.location.pathname === '/CadastrarEmpresa' 
@@ -41,7 +41,8 @@ class subNav extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        empresaNome: state.EmpLogadaReducer.nome
+        empresaNome: state.EmpLogadaReducer.nome,
+        artesaoNome: state.EmpLogadaReducer.nome
     }
 }
 

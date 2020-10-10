@@ -6,10 +6,11 @@ export const cadastrarPessoaf = createAction('CADASTRAR_PESSOAF')
 export const fetchCadastrarPessoaf = (dadosPessoaf) => {
     return (dispatch) => {
         console.log('--XX', dadosPessoaf)
-        // usar rota '/cadastrarPessoaf' no back
-        axios.post('/cadastrarPessoaf', dadosPessoaf)
+        // usar rota 'artesao/cadastrarPessoaf' no back
+        axios.post('/artesao/cadastrarPessoaf', dadosPessoaf)
             .then((dados) => {
                 console.log(dados)
+                window.localStorage.setItem('userId', dados.data._id)
                 dispatch(cadastrarPessoaf(dados.data))
             })
             .catch((erro)=>{console.log(erro)})

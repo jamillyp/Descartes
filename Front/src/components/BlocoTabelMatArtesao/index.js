@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css';
+import { connect } from 'react-redux';
 
 class BlocoTabelMatArtesao extends React.Component {
     render() {
@@ -26,16 +27,18 @@ class BlocoTabelMatArtesao extends React.Component {
                             <tbody className='ListagemMateriaisTabela'>
                                 <tr className="ListaMateriais">
                                     <td id='tdM1'>001</td>
-                                    <td id='tdM2'>Papel</td>
-                                    <td id='tdM3'>300kg</td>
-                                    <td id='tdM4'>00/00/00 <p>00:00</p></td>
+                                    <td id='tdM2'>{this.props.material[0].tipoMaterial}</td>
+                                    <td id='tdM3'>{this.props.material[0].qtdTam}</td>
+                                    <td id='tdM4'>{this.props.material[0].disponibilidade}<p>
+                                    {this.props.material[0].horario}</p></td>
                                     <td id='tdM5'><input id="Check1" type="checkbox" /></td>
                                 </tr>
                                 <tr className="ListaMateriais">
                                     <td id='tdM1'>002</td>
-                                    <td id='tdM2'>Retalhos de tecido</td>
-                                    <td id='tdM3'>30m</td>
-                                    <td id='tdM4'>00/00/00 <p>00:00</p></td>
+                                    <td id='tdM2'>{this.props.material[1].tipoMaterial}</td>
+                                    <td id='tdM3'>{this.props.material[1].qtdTam}</td>
+                                    <td id='tdM4'>{this.props.material[1].disponibilidade}
+                                    <p>{this.props.material[1].horario}</p></td>
                                     <td id='tdM5'><input id="Check1" type="checkbox" /></td>
                                 </tr>
                             </tbody>
@@ -47,5 +50,10 @@ class BlocoTabelMatArtesao extends React.Component {
         )
     }
 }
+function mapStateToProps(state) {
+    return {
+        material: state.materialReducer
+    }
+}
 
-export default BlocoTabelMatArtesao;
+export default connect(mapStateToProps)(BlocoTabelMatArtesao);
