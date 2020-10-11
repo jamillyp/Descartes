@@ -1,8 +1,28 @@
 import React from 'react';
 import './styles.css';
 import { connect } from 'react-redux';
+import { fetchCadastrarMaterial } from '../../store/actions/actionCadastroM';
 
 class BlocoTabelMatArtesao extends React.Component {
+
+    componentDidMount(){
+        this.props.fetchCadastrarMaterial();
+    }
+    gerarListaMaterial = () => {
+        let tds = []
+        for (let materiais of this.props.materiais) {
+            tds.push(
+                <tr className="ListaMateriais">
+                    <td id='tdM1'>-</td>
+                    <td id='tdM2'>{materiais.tipoMaterial}</td>
+                    <td id='tdM3'>{materiais.qtdTam}</td>
+                    <td id='tdM4'>{materiais.disponibilidade} {materiais.horario}</td>
+                    <td id='tdM5'><input id="Check1" type="checkbox" /></td>
+                </tr>
+            )
+        }
+        return (<ul>{tds}</ul>)
+    }
     render() {
         return (
             <div className='BlocoMateriais'>
@@ -25,22 +45,16 @@ class BlocoTabelMatArtesao extends React.Component {
                         </table>
                         <table className='TabelaListaProdVisu'>
                             <tbody className='ListagemMateriaisTabela'>
+                                {this.props.materiais == [] ?
                                 <tr className="ListaMateriais">
-                                    <td id='tdM1'>001</td>
-                                    <td id='tdM2'>{this.props.material[0].tipoMaterial}</td>
-                                    <td id='tdM3'>{this.props.material[0].qtdTam}</td>
-                                    <td id='tdM4'>{this.props.material[0].disponibilidade}<p>
-                                    {this.props.material[0].horario}</p></td>
-                                    <td id='tdM5'><input id="Check1" type="checkbox" /></td>
-                                </tr>
-                                <tr className="ListaMateriais">
-                                    <td id='tdM1'>002</td>
-                                    <td id='tdM2'>{this.props.material[1].tipoMaterial}</td>
-                                    <td id='tdM3'>{this.props.material[1].qtdTam}</td>
-                                    <td id='tdM4'>{this.props.material[1].disponibilidade}
-                                    <p>{this.props.material[1].horario}</p></td>
-                                    <td id='tdM5'><input id="Check1" type="checkbox" /></td>
-                                </tr>
+                                   <td id='tdM1'>-</td>
+                                   <td id='tdM2'></td>
+                                   <td id='tdM3'></td>
+                                   <td id='tdM4'></td>
+                                   <p></p>
+                                   <td id='tdM5'><input id="Check1" type="checkbox" /></td>
+                               </tr>
+                                     : this.gerarListaMaterial()}
                             </tbody>
                         </table>
                         <button id='AtualizarSolicitacao'>Atualizar</button>
@@ -52,8 +66,8 @@ class BlocoTabelMatArtesao extends React.Component {
 }
 function mapStateToProps(state) {
     return {
-        material: state.materialReducer
+        materiais: state.materialReducer
     }
 }
 
-export default connect(mapStateToProps)(BlocoTabelMatArtesao);
+export default connect(mapStateToProps, {fetchCadastrarMaterial})(BlocoTabelMatArtesao);

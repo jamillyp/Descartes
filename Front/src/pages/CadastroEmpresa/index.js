@@ -27,6 +27,7 @@ class CadastroEmpresa extends Component {
   onSubmit(e){
     e.preventDefault()
     console.log(this.state)
+    alert('Cadastro realizado! ')
 
     this.props.cadastrarE(this.state)
     
@@ -196,7 +197,7 @@ class CadastroEmpresa extends Component {
 
 function mapStateToProps(state) {
   return {
-      id: state.CadastroEmpresa
+      empresas: state.empresaReducer
   }
 }
 

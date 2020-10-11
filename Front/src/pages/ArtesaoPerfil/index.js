@@ -3,8 +3,26 @@ import Pesquisa from "../../components/BarraPesquisa";
 import './styles.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { fetchCadastrarEmpresa } from '../../store/actions/actionsCadastro';
 
 class paginaArtesao extends Component {
+
+    componentDidMount(){
+        this.props.fetchCadastrarEmpresa();
+    }
+
+    gerarListaEmpresas = () => {
+        let trs = []
+        for (let empresas of this.props.empresaX) {
+            trs.push(
+                <tr>
+                    <td><Link to="/perfilEmpresaVisualizacao">{empresas.nome}</Link></td>
+                </tr>
+            )
+        }
+        return (<ul>{trs}</ul>)
+    }
+
     render() {
         return (
             <div className="Artesao-Perfil">
@@ -12,24 +30,14 @@ class paginaArtesao extends Component {
                 <div className="busca-mapa">
                     <div className="menuBusca">
                         <br />
-                        <h3>Nome Bairro</h3>
-            
+                        <h3>Bairro</h3>
                         <p>Cidade/UF</p><br />
-                        <th></th>
-
+                        
                         <table>
-                            <tr>
-                                <td>Empresa A <Link to="/perfilEmpresaVisualizacao">ver mais</Link></td>
-                            </tr>
-                            <tr>
-                                <td>Empresa B <Link to="/perfilEmpresaVisualizacao">ver mais</Link></td>
-                            </tr>
-                            <tr>
-                                <td>Empresa C <Link to="/perfilEmpresaVisualizacao">ver mais</Link></td>
-                            </tr>
-                            <tr>
-                                <td>Empresa D <Link to="/perfilEmpresaVisualizacao">ver mais</Link></td>
-                            </tr>
+                        {this.props.empresas == [] ?
+                                <tbody>
+                               </tbody>
+                                : this.gerarListaEmpresas()}
                         </table>
 
                     </div>
@@ -45,9 +53,9 @@ class paginaArtesao extends Component {
 function mapStateToProps(state) {
     console.log('PE----',state)
         return {
-            material: state.empresaReducer
+            empresaX: state.empresaReducer
         }
 }
 
-export default connect(mapStateToProps)(paginaArtesao);
+export default connect(mapStateToProps, {fetchCadastrarEmpresa})(paginaArtesao);
 

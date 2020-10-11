@@ -45,7 +45,7 @@ const empresaSchema = mongoose.Schema({
         type: String,
     },
     materiais: [{
-        tipoMaterial: String,
+        tipoMaterial: String, 
         qtdTam: Number,
         disponibilidade: Date,
         horario: String

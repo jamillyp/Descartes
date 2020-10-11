@@ -1,7 +1,6 @@
 .Artesao-Perfil {
     height: 1000px;
 }
-
 .busca-mapa {
     display: flex;
     position: absolute;
@@ -13,11 +12,6 @@
     background-color: rgb(235, 234, 232);
     width: 80%;
     height: 400px;
-}
-.mapaBusca img {
-    width: 500px;
-    height: 500px;
-    
 }
 .menuBusca {
     width: 30%;
@@ -38,14 +32,14 @@
     
     background-color: rgb(235, 234, 232);
     color:#352166;
-    margin-left: 20px;
+    margin-left: 10px ;
     border-radius: 10px;
-    height: 290px;
+    height: 73%;
+    width: 93%;
 
 }
 .menuBusca a {
-    margin-left: 90px;
     text-decoration: none;
-    font-size: small;
     font-weight: bolder;
+    margin-top: 10px;
 }

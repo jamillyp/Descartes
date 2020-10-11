@@ -10,10 +10,10 @@ class BlocoAddMaterial extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            tipoMaterial: ' ',
-            qtdTam: ' ',
-            disponibilidade: ' ',
-            horario: ' '
+            tipoMaterial: '',
+            qtdTam: '',
+            disponibilidade: '',
+            horario: ''
         }
         this.setDados = this.setDados.bind(this);
         this.onSubmit = this.onSubmit.bind(this);

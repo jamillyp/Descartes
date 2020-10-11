@@ -24,7 +24,18 @@ router.post('/cadastrarEmpresa', (request, response) => {
 
 // cadastro de materiais
 router.post('/:id/cadastrarMaterial', (request, response) => {
-    const id = request.params.id
+
+    //EmpresaModel.find()
+        //.then((data) => {
+        //    console.log('material cadastrado! ')
+        //    console.log(data)
+        //    console.log(request.body)
+        //    response.json(request.body)
+        //    response.json(data)
+        //})
+        //.catch((erro) => {
+        //    console.log(erro)
+        //})
 
     // EmpresaModel.findById(id)
     //     .then((data) => {
