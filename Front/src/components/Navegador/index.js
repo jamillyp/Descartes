@@ -14,7 +14,7 @@ class Navegador extends React.Component {
   render() {
     return (
       <div className="Navegador">
-        <nav className="Navegador-principal">
+        <div className="Navegador-principal">
           <div className="logo">
             <Link to="/">
               <img
@@ -71,7 +71,7 @@ class Navegador extends React.Component {
               </li>
             </ul>
           </div>
-        </nav>
+        </div>
       </div>
     );
   }

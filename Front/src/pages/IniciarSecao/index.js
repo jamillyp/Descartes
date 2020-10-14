@@ -3,6 +3,7 @@ import './styles.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchFazerLogin } from '../../store/actions/actionLogin';
+import { Container } from 'react-bootstrap'
 
 
 class logarFunc extends Component {
@@ -29,7 +30,8 @@ class logarFunc extends Component {
 
     render() {
         return (
-            <div className="Cadastro">
+            <Container>
+                <div className="Cadastro">
                 <div className="cadastrar">
                     <form method='post' action='/logado'  className="estilo-cadastro" onSubmit={this.onSubmit}>
                         <br />
@@ -56,6 +58,8 @@ class logarFunc extends Component {
                 </div>
                 
             </div>
+            </Container>
+            
         )
     }
 }

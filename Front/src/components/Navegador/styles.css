@@ -13,28 +13,25 @@
     
 }
 .Navegador .ul {
-    list-style: none;
-    list-style-type: none; 
-    text-decoration: none;
-    display: flex;
+    display: inline-flex;
 }
 #logo {
     width: 124px;
-    height: 35px;
-    margin-left: 150px;    
+    margin-left: 140px;    
 }
 .Nav-icones {
-    margin-top: 15px;
-    margin-right: 150px;
+    margin-top: 38px;
+    margin-right: 140px;  
 }
-.Nav-icones a{
-    margin-left: 20px;
-    text-decoration: none;
-    font-style: normal;
+
+.Nav-icones ul li a {
+    margin-left: 15px;
     font-size: 18px;
+    text-decoration: none;
+    color: #352166;
 }
 .Nav-icones img {
-    margin: 0 8px 0;
+    margin: 0 8px 10px 0;
 }
 .mapa{
     width: 16px;

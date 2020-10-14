@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./styles.css";
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Container } from 'react-bootstrap';
 
 import { fetchCadastrarEmpresa } from '../../store/actions/actionsCadastro';
 
@@ -26,11 +27,7 @@ class CadastroEmpresa extends Component {
 
   onSubmit(e){
     e.preventDefault()
-    console.log(this.state)
-    alert('Cadastro realizado! ')
-
-    this.props.cadastrarE(this.state)
-    
+    this.props.cadastrarE(this.state, this.props.history)
     this.setState({nome: '', razaoSocial:'', cnpj: '', endereco:'', numero:'',
     complemento:'',cep:'', cidade:'', tel1:'', tel2:'', site:'', email:'', senha:'', senhaRep:''})
   }
@@ -38,7 +35,8 @@ class CadastroEmpresa extends Component {
 
   render() {
     return (
-      <div className="cadastroEmpresa">
+      <Container>
+        <div className="cadastroEmpresa">
 
         <div className="idEmpresa">
 
@@ -181,16 +179,17 @@ class CadastroEmpresa extends Component {
                 e confirma que leu a 
                 <strong> Política de <br /> 
                 Privacidade.</strong>
-              </p><br />
+              </p>
               
               <button type="submit" value="cadastrar" className="enviarEmpresa">
                 Cadastrar
-              </button><br /><br />
-              <Link to="/perfilEmpresa">Ver Perfil</Link>
+              </button><br />
             </fieldset>
           </form>
         </div>
       </div>
+      </Container>
+      
     );
   }
 }
@@ -203,9 +202,9 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    cadastrarE: (dadosEmpresa) => { dispatch(fetchCadastrarEmpresa(dadosEmpresa))}
+    cadastrarE: (dadosEmpresa, history) => { dispatch(fetchCadastrarEmpresa(dadosEmpresa, history))}
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CadastroEmpresa);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CadastroEmpresa));
 

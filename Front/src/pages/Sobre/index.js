@@ -4,11 +4,13 @@ import video from "../../assets/video/video_conceitual.mp4";
 import videoThumb from "../../assets/svg/video.svg";
 import youtube from "../../assets/svg/youtube@4x.svg";
 import instagram from "../../assets/svg/instagran@4x.svg";
+import { Container } from 'react-bootstrap';
 
 export default class Sobre extends Component {
   render() {
     return (
-      <div >
+      <Container>
+        <div >
         <div className="sobre-titulo">
           <h2>Somos uma rede colaborativa que ajuda você,</h2>
           <h2 className="h2-azul">empresa e artesão</h2>
@@ -17,22 +19,17 @@ export default class Sobre extends Component {
         <div className="sobre">
             <div className="texto-sobre">
             
-            <h2>Confira o vídeo e saiba como atuamos!</h2><br/><br/>
+            <h4>Confira o vídeo e saiba como atuamos!</h4><br/>
             <p>
               A quantidade de resíduos sólidos que são descartados
-              <br />
               de maneira incorreta tem sido um dos maiores
-              <br />
-              problemas dentro da nossa sociedade. Assim, a<br />
-              Descartes, vem para auxiliar o gereciamento desses
-              <br />
+              problemas dentro da nossa sociedade. Assim, a
+              <strong> Descartes</strong>, vem para auxiliar o gereciamento desses
               resíduos, atuando como intermediário entre empresas
-              <br />
               que quere destinar seus resíduos sólidos descartáveis
-              <br />
               para pessoas que as utilizarão para fins artesanais.
-            </p><br/><br/>
-            <h2>Acompanhem nas nossas redes sociais:</h2><br/>
+            </p>
+            <h4>Acompanhem nas nossas redes sociais:</h4><br/>
             <a href="https://www.youtube.com/channel/UCECIHlguuhCiSk24xiSWCew/featured">
               <img src={youtube} alt="youtube logo"></img>/projetodescartes
             </a>
@@ -49,6 +46,8 @@ export default class Sobre extends Component {
         </div>
         
       </div>
+      </Container>
+      
     );
   }
 }

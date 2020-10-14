@@ -5,6 +5,9 @@ import App from './App';
 import { Provider } from 'react-redux';
 import storeConfig from './store/storeConfig';
 
+// bootstrap
+import 'bootstrap/dist/css/bootstrap.css'
+
 ReactDOM.render(
   <Provider store={storeConfig}>
     <App />

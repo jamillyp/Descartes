@@ -7,13 +7,15 @@ import brinquedo from '../../assets/svg/brinquedo.svg';
 import escritorio from '../../assets/svg/escritorio.svg';
 import jardim from '../../assets/svg/jardim.svg';
 import bolsa from '../../assets/svg/bolsa.svg';
-import oferta from '../../assets/svg/produtos-ofertas.svg'
+import oferta from '../../assets/svg/produtos-ofertas.svg';
+import { Container } from 'react-bootstrap';
 
 
 export default class Loja extends Component {
     render() {
         return (
-            <div className="loja">
+            <Container>
+               <div className="loja">
                 <div className="Titulos-BarraP">
                     <div className="titulos-loja">
                     <h1>Os melhores produtos você encontra aqui.</h1>
@@ -45,28 +47,37 @@ export default class Loja extends Component {
             </div>
             <div className="loja-visual">
                 <div className="categorias">
-                    <h3>Categorias populares</h3>
+                    <br />
+                    <h4>Categorias populares</h4>
                     <br />
                     <ul>
-                        <img src={movel} /><br />
-                        <a href=""><li>Móveis</li></a> 
-                        <img src={decoracao} /><br />
-                        <a href=""><li>Decoração</li></a>
-                        <img src={brinquedo} /><br />
-                        <a href=""><li>Brinquedos</li></a>
-                        <img src={jardim} /><br />
-                        <a href=""><li>Jardim</li></a>
-                        <img src={escritorio} /><br />
-                        <a href=""><li>Escritório</li></a>
-                        <img src={bolsa} /><br />
-                        <a href=""><li>Bolsas e Mochilas</li></a>
+                        <a href=""><li>
+                            <img src={movel} />
+                             Móveis</li></a> 
+                        <a href=""><li>
+                            <img src={decoracao} />
+                            Decoração</li></a>
+                        <a href=""><li>
+                            <img src={brinquedo} />
+                            Brinquedos</li></a>
+                        <a href=""><li>
+                            <img src={jardim} />
+                            Jardim</li></a>
+                        <a href=""><li>
+                            <img src={escritorio} />
+                            Escritório</li></a>
+                        <a href=""><li>
+                            <img src={bolsa} />
+                            Bolsas e Mochilas</li></a>
                     </ul><br />
                 </div>
                 <div className="ofertas">
                         <img src={oferta} />
                 </div>
             </div>
-        </div>
+        </div> 
+            </Container>
+            
         )
     }
 }

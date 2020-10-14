@@ -3,9 +3,7 @@
 }
 .BlFundo2 {
     position: absolute;
-    width: 1230px;
     height: 330px;
-    margin-left: 145px;
     background-color: #6CB9AA;
     padding-top: 10px;
     border-radius: 10px;
@@ -18,7 +16,6 @@
     font-size: 15pt;
 }
 .CabecalhoBlMateriais #DivisoriaTabel {
-    width: 1200px;
     margin-left: 15px;
 }
 .TabelaListaTitle {

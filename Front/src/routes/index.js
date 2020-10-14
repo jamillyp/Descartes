@@ -18,7 +18,7 @@ export default class Routes extends Component {
         <Route path="/cadastrarArtesao" component={CadastroArtesao} />
         <Route path="/perfilArtesao" component={perfilArtesao} />
         <Route path="/perfilEmpresa" component={empresaPerfil} />
-        <Route path="/perfilEmpresaVisualizacao" component={PerfilEmpVisualizar} />
+        <Route path="/perfilEmpresaVisualizacao/:id" component={PerfilEmpVisualizar} />
       </Switch>
     );
   }

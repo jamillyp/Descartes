@@ -2,14 +2,12 @@
     text-align: center;
     color:  #352166;
     align-items: center;
-    height: 420px;    
+    height: 700px;    
 }
 .cadastrar {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+    margin-left: 25%;
     position: absolute;
-    top: 165px;  
+    top: 250px;  
 }
 .estilo-cadastro {
     border-style: none;

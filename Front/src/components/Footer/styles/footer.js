@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    padding: 60px 60px;
+    padding: 45px 60px;
     background: #6CB9AA;
     margin-top: auto;
 `
@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     max-width: 1000px;
-    margin-left: 120px;
+    margin-left: 80px;
 `
 export const Column = styled.div`
     display: flex;

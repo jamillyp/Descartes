@@ -3,6 +3,7 @@ import './style.css';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
 import { fetchCadastrarMaterial } from '../../store/actions/actionCadastroM';
+import { Container } from 'react-bootstrap';
 
 
 class BlocoAddMaterial extends React.Component{
@@ -32,7 +33,8 @@ class BlocoAddMaterial extends React.Component{
 
     render() {
         return (
-            <div className='AddMaterial'>
+            <Container>
+                <div className='AddMaterial'>
                 <div className='SegundoBloco'>
                     <div className='BlocoAmarelo'>
                         <section className='CabecalhoBlAmarelo'>
@@ -75,9 +77,10 @@ class BlocoAddMaterial extends React.Component{
                             <p id='BotaoCadastrar'><button id='BotaoCad' type="submit">Cadastrar</button></p>
                         </form>
                     </div>
-                    <Link to="/perfilArtesao">Ver perfilArtesao</Link>
                 </div>
             </div>
+            </Container>
+            
         );
     }
 }

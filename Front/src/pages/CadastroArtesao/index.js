@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import './styles.css';
 import { connect } from 'react-redux';
 import { fetchCadastrarPessoaf } from '../../store/actions/actionCadastroPF';
+import { Container } from 'react-bootstrap';
 
 class CadastroArtesao extends Component {
 
@@ -24,7 +25,8 @@ class CadastroArtesao extends Component {
   
   onSubmit(e){
     e.preventDefault()
-    this.props.cadastroPessoaf(this.state)
+    this.props.cadastroPessoaf(this.state, this.props.history)
+    console.log(this.props)
     console.log(this.state)
     this.setState({nome: '', cpf: '', dataNasc:'', endereco:'', numero:'',
     complemento:'',cep:'', cidade:'', tel1:'', tel2:'', email:'', senha:'', senhaRep:''})
@@ -32,7 +34,8 @@ class CadastroArtesao extends Component {
   
   render() {
     return (
-      <div className="cadastroArtesao">
+      <Container>
+        <div className="cadastroArtesao">
         <div className="idArtesao">
 
             <div className="link-empresa">
@@ -166,7 +169,7 @@ class CadastroArtesao extends Component {
                   e confirma que leu a 
                   <strong> Política de <br /> 
                   Privacidade.</strong>
-                </p><br />
+                </p>
                 <button type="submit" className="botaoArtesao" value="cadastrar">
                   Cadastrar
                 </button>
@@ -175,6 +178,8 @@ class CadastroArtesao extends Component {
             </div>
         
       </div>
+      </Container>
+      
     );
   }
 }
@@ -187,9 +192,9 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    cadastroPessoaf: (dadosPessoaf) => { dispatch(fetchCadastrarPessoaf(dadosPessoaf))}
+    cadastroPessoaf: (dadosPessoaf, history) => { dispatch(fetchCadastrarPessoaf(dadosPessoaf, history))}
   }
 }
 
-export default connect( mapStateToProps, mapDispatchToProps)(CadastroArtesao);
+export default withRouter(connect( mapStateToProps, mapDispatchToProps)(CadastroArtesao));
 

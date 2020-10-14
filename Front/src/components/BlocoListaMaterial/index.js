@@ -2,31 +2,24 @@ import React, { Component } from 'react';
 import './styles.css';
 import { connect } from 'react-redux';
 import { fetchCadastrarMaterial } from '../../store/actions/actionCadastroM';
+import { Container } from 'react-bootstrap';
 
 class listaMaterial extends Component {
-
-    componentDidMount(){
-        this.props.fetchCadastrarMaterial();
-    }
-    gerarLista = () => {
-        let trs = []
-        for (let materiais of this.props.materiais) {
-            trs.push(
-                <tr id="lista">
-                    <td id='td1'>-</td>
-                    <td id='td2'>{materiais.tipoMaterial}</td>
-                    <td id='td3'>{materiais.qtdTam}</td>
-                    <td id='td4'><input id="Check1" type="checkbox" /></td>
-                    <td id='td5'><input id="Check2" type="checkbox" /></td>
-                    <td id='td6'><input id="Check3" type="checkbox" /></td>
-                </tr>
-        )}
-        return (<tr className="ListaMateriais">{trs}</tr>)
-    }
-
     render() {
+
+        const materialInserido = this.props.materiais.map(material =>
+            <tr id="lista">
+                <td id='td1'>-</td>
+                <td id='td2'>{material.tipoMaterial}</td>
+                <td id='td3'>{material.qtdTam}</td>
+                <td id='td4'><input id="Check1" type="checkbox" /></td>
+                <td id='td5'><input id="Check2" type="checkbox" /></td>
+                <td id='td6'><input id="Check3" type="checkbox" /></td>
+            </tr>
+        )
         return (
-            <div className='TerceiroBloco'>
+            <Container>
+                <div className='TerceiroBloco'>
                 <div className='BlocoVerde'>
                     <section className='CabecalhoBlAmarelo'>
                         <h1>Lista de Materiais</h1>
@@ -47,14 +40,15 @@ class listaMaterial extends Component {
                         </table>
                         <table className='TabelaListaProd2'>
                             <tbody className='ListagemTabela'>
-                            {this.props.materiais==null?
-                                <tr className="ListaMateriais">nenhum material</tr> : this.gerarLista()}
+                            {materialInserido}
                             </tbody>
                         </table>
                         <button id='Atualizar'>Atualizar</button>
                     </form>
                 </div>
         </div>
+            </Container>
+            
         );
     }
 }
@@ -62,7 +56,7 @@ class listaMaterial extends Component {
 function mapStateToProps(state) {
     console.log('PE----',state)
         return {
-            materiais: state.materialReducer
+            materiais: state.EmpLogadaReducer.materiais
         }
 }
 

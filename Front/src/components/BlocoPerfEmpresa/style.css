@@ -1,13 +1,11 @@
 .PrimeiroBloco {
     display: inline-flex;
-    float: left;
-    margin: 50px auto 50px 150px;
+    margin-top: 150px;
 }
 
 .BlocoEsquerdo {
     display: inline-flex;
     background-color: #352166;
-    width: 60%;
     height: auto;
     padding: 40px;
     border-radius: 10px 0 0 10px;
@@ -62,7 +60,6 @@ button#BotaoEditPerfil {
 
 .BlocoDireita {
     background-color: #48B9A3;
-    width: 30%;
     height: auto;
     padding: 30px;
     border-radius: 0 10px 10px 0;
@@ -70,7 +67,6 @@ button#BotaoEditPerfil {
 
 .CabecalhoSelos {
     display: inline-flex;
-    float: left;
     color:  #352166;
     margin-left: 10px;
 }

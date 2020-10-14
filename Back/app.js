@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 
 // config mongoose
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/descartesDB').then((result) => {
+mongoose.connect('mongodb://localhost/descartesDB1').then((result) => {
     console.log('Banco conectado com sucesso!  ' + result)
 }).catch((err) => {
     console.log('Erro, Banco não conectado! ' + err)

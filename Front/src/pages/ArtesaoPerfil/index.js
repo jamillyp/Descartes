@@ -3,12 +3,13 @@ import Pesquisa from "../../components/BarraPesquisa";
 import './styles.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchCadastrarEmpresa } from '../../store/actions/actionsCadastro';
+import { fetchEmpresas } from '../../store/actions/actionEmpresa';
+import { Container } from 'react-bootstrap'
 
 class paginaArtesao extends Component {
 
     componentDidMount(){
-        this.props.fetchCadastrarEmpresa();
+        this.props.fetchEmpresas();
     }
 
     gerarListaEmpresas = () => {
@@ -16,7 +17,7 @@ class paginaArtesao extends Component {
         for (let empresas of this.props.empresaX) {
             trs.push(
                 <tr>
-                    <td><Link to="/perfilEmpresaVisualizacao">{empresas.nome}</Link></td>
+                    <td><Link to={`/perfilEmpresaVisualizacao/${empresas._id}`}>{empresas.nome}</Link></td>
                 </tr>
             )
         }
@@ -25,19 +26,17 @@ class paginaArtesao extends Component {
 
     render() {
         return (
-            <div className="Artesao-Perfil">
+            <Container>
+                <div className="Artesao-Perfil">
                 <Pesquisa />
                 <div className="busca-mapa">
                     <div className="menuBusca">
                         <br />
-                        <h3>Bairro</h3>
-                        <p>Cidade/UF</p><br />
+                        <h3>Empresas</h3>
+                        <br />
                         
                         <table>
-                        {this.props.empresas == [] ?
-                                <tbody>
-                               </tbody>
-                                : this.gerarListaEmpresas()}
+                        {this.gerarListaEmpresas()}
                         </table>
 
                     </div>
@@ -46,6 +45,8 @@ class paginaArtesao extends Component {
                     </div>
                 </div>
             </div>
+            </Container>
+            
         )
     }
 }
@@ -57,5 +58,5 @@ function mapStateToProps(state) {
         }
 }
 
-export default connect(mapStateToProps, {fetchCadastrarEmpresa})(paginaArtesao);
+export default connect(mapStateToProps, {fetchEmpresas})(paginaArtesao);
 

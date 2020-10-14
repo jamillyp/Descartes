@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 class subNav extends Component {
     render() {
         return (
-            <div>
+            <div className='SubNav'>
                 <nav className="Navegador-menu">
                     <p className="p1">
                         <ul className="ul">

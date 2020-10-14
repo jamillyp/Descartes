@@ -1,5 +1,5 @@
 .idEmpresa {
-    height: 850px;
+    height: 1000px;
     
 }
 .link-pfisica a {
@@ -8,7 +8,6 @@
     font-weight: bolder;
     display: flex;
     position: absolute;
-    width: 70%;
     left: 56%;
     position: absolute;
     top: 145px;

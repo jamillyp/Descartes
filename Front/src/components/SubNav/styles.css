@@ -12,8 +12,6 @@
     font-size: 18px;
     color: #352166;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-
     
 }
 .Navegador-menu .ul{
@@ -28,9 +26,17 @@
     text-decoration: none;
     color: #D6692B;
 }
+.p1 {
+    margin-left: 125px;
+    margin-top: 35px;
+}
 .p1 li{
     margin-left: 15px;
     font-weight: bold;
+}
+.p2 {
+    margin-right: 120px;
+    margin-top: 17px;
 }
 .p2 a {
     margin-left: 8px;
@@ -39,4 +45,5 @@
 }
 .Navegador-menu a:hover {
     background:  #f1d168;
+    text-decoration: none;
 }

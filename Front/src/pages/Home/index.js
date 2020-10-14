@@ -5,11 +5,12 @@ import Carousel from "../../components/Carousel";
 import Sobre from "../Sobre";
 import Parceiros from "../Parceiros";
 import Loja from "../Loja";
+import { Container } from 'react-bootstrap'
 
 export default class Home extends Component {
   render() {
     return (
-      <div>
+      <Container>
         <body>
           <Pesquisa />
           <Carousel />
@@ -17,7 +18,7 @@ export default class Home extends Component {
           <Parceiros />
           <Loja />
         </body>
-      </div>
+      </Container>
     );
   }
 }

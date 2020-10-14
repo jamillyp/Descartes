@@ -2,31 +2,31 @@
     position: absolute;
     left: 10%;
     width: 80%;
-    height: 598px;
-    top: 770px;
+    height: 650px;
+    top: 750px;
     display: flex;
     justify-content: space-between;
     color: #D6692B;
     font-size: 13.5px;
     align-items: center;
+    padding: 10px;
 }
 .sobre-titulo {
     position: absolute;
-    left: 11%;
-    width: 80%;
-    top: 770px;
-    justify-content: space-around;
+    top: 750px;
+    margin-left: 15%;
     text-align: center;
     color:#D6692B ;
     
 }
 .sobre p {
     color:#D6692B ;
+    font-size: 16px;
 }
 .h2-azul{
     color: #352166;
 }
-.sobre h2 {
+.sobre h4 {
     color: #352166;
 }
 .sobre a{
@@ -39,6 +39,10 @@
     margin-right: 20px;
 }
 .texto-sobre img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+}
+.video {
+    height: auto;
+    width: 72%;
 }

@@ -4,7 +4,6 @@
 }
 
 .TabelaSelos tr td {
-    width: 300px;
     padding: 15px 40px 10px 0;
     font-size: 14px;
 }
@@ -22,9 +21,10 @@ td#Numero {
 .SegundoBloco {
     position: absolute;
     background-color: #EDCB59;
-    margin: 450px 0 10px 150px;
+    margin-top: 450px;
     border-radius: 10px;
     top: 180px;
+    width: 25%;
 
 }
 

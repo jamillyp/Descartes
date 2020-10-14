@@ -51,7 +51,6 @@
     border: none;
 }
 .loja-visual {
-    
     display: flex;
     justify-content: space-between;
     color: #352166;
@@ -62,6 +61,8 @@
     list-style: none;
     text-decoration: none;
     color:#352166 ;
+    margin-left: 15px;
+    margin-top: -5px;
 }
 .categorias img{
     width: 8%;
@@ -70,7 +71,12 @@
 .categorias {
     background-color: #F1F1F1;
     border-radius: 10px;
-    width: 30%;
+    width: 29%;
+    height: 400px;
+    text-align: left;
+}
+.categorias h4 {
+    text-align: center;
 }
 .ofertas img {
     margin-top: 10px;

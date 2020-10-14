@@ -2,9 +2,8 @@
     margin-left: 150px;
     position: absolute;
     background-color:#6CB9AA;
-    margin: 460px 0 0px 520px;
+    margin: 460px 0 0px 370px;
     border-radius: 10px;
-    width: 52.5%;
     top: 168px;
 }
 
@@ -14,7 +13,6 @@
 }
 
 p#DivisoriaTabel {
-    width: 640px;
     border-top: 3px solid #352166;
 }
 

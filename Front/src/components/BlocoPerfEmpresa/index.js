@@ -5,11 +5,13 @@ import phone1 from '../../assets/svg/phone1.svg';
 import mail1 from '../../assets/svg/mail1.svg';
 import web1 from '../../assets/svg/web1.svg';
 import { connect } from 'react-redux';
+import { Container } from 'react-bootstrap'
 
 export class BlocoPerfEmpresa extends React.Component{
     render() {
         return (
-            <div className='PrimeiroBloco'>
+            <Container>
+                <div className='PrimeiroBloco'>
                 <div className='BlocoEsquerdo'>
                     <section className='FotoEmpresa'>
                         <img src='' id='LogoEmpresa' />
@@ -54,6 +56,7 @@ export class BlocoPerfEmpresa extends React.Component{
                     </section>
                 </div> 
             </div>
+            </Container> 
         )
     }
 }
