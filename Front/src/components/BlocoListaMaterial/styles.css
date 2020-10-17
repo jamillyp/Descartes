@@ -1,8 +1,7 @@
 .TerceiroBloco {
-    margin-left: 150px;
     position: absolute;
     background-color:#6CB9AA;
-    margin: 460px 0 0px 370px;
+    margin: 460px 0 0px 390px;
     border-radius: 10px;
     top: 168px;
 }
@@ -16,6 +15,10 @@ p#DivisoriaTabel {
     border-top: 3px solid #352166;
 }
 
+.CabecalhoBlAmarelo h1 {
+    font-size: 16pt;
+}
+
 .TabelaProdCadastrados {
     margin-top: 20px;
 }
@@ -25,16 +28,12 @@ p#DivisoriaTabel {
     padding: 5px;
 }
 
-th#th1 {
-    width: 10px;
-}
-
 th#th2 {
-    width: 249px;
+    width: 280px;
 }
 
 th#th3 {
-    width: 80px;
+    width: 150px;
 }
 
 th#th4 {
@@ -42,7 +41,7 @@ th#th4 {
 }
 
 th#th5 {
-    width: 40px;
+    width: 70px;
 }
 
 .TabelaListaProd1 {
@@ -76,15 +75,15 @@ td#td5 {
 }
 
 input#Check1 {
-    margin-left: 35px;
+    margin-left: 120px;
 }
 
 input#Check2 {
-    margin-left: 35px;
+    margin-left: 60px;
 }
 
 input#Check3 {
-    margin-left: 60px;
+    margin-left: 30px;
 }
 
 .ListagemTabela {

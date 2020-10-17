@@ -9,11 +9,13 @@
   "author": "Jamilly",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
     "handlebars": "^4.7.6",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.8",
     "nodemon": "^2.0.4"
   }

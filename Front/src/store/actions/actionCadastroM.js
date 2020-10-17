@@ -16,3 +16,28 @@ export const fetchCadastrarMaterial = (dadosMaterial) => {
             .catch((erro)=>{console.log(erro)})
     }
 }
+
+export const fetchMaterialDoado = (idMaterial) => {
+    return (dispatch) => {
+
+        const idEmpresa = window.localStorage.getItem('userId')
+        axios.put(`/empresas/${idEmpresa}/addNegociacoes/${idMaterial}`)
+            .then((dados) => {
+                console.log('reservado--',dados)
+                dispatch(cadastrarMaterial(dados.data))
+            })
+            .catch((erro)=>{console.log(erro)})
+    }
+}
+
+export const fetchMaterialSolicitado = (idEmpresa) => {
+    return (dispatch) => {
+
+        axios.put(`/empresas/${idEmpresa}/addNegociacoes`)
+            .then((dados) => {
+                console.log('notificou--',dados)
+                dispatch(cadastrarMaterial(dados.data))
+            })
+            .catch((erro)=>{console.log(erro)})
+    }
+}

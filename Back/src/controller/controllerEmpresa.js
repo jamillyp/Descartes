@@ -1,36 +1,6 @@
 const { response, request } = require('express');
 const EmpresaModel = require('../models/EmpresaModel');
 
-// listar empresas
-module.exports.listarEmpresas = (request, response) => {
-
-    EmpresaModel.find()
-        .then((empresas) => {
-            response.json(empresas)
-        })
-        .catch((erro) => {
-            console.log(erro)
-        })
-
-}
-
-// login empresa
-module.exports.empresaLogada = (request, response) => {
-
-    const email = req.body.email
-    const senha = req.body.senha
-    
-    EmpresaModel.findOne({email: email})
-        .then((empresa) => {
-            if(!empresa) return response.status(400).json({message: 'usuario não existe!'})
-            if(senha !== empresa.senha) return response.status(403).json({message: 'senha incorreta, tente novamente!'})
-
-            response.json(empresa)
-        })
-        .catch(console.log)
-    
-}
-
 // criar empresa
 module.exports.criarEmpresa = (request, response) => {
 
@@ -45,6 +15,44 @@ module.exports.criarEmpresa = (request, response) => {
         })
 };
 
+// listar empresas
+module.exports.listarEmpresas = (request, response) => {
+
+    EmpresaModel.find()
+        .then((empresas) => {
+            response.json(empresas)
+        })
+        .catch((erro) => {
+            console.log(erro)
+        })
+
+}
+
+// incrementar negociações + doar material + excluir material doado do banco
+module.exports.addNegociacoes = (request, response) => {
+    const id = request.params.id
+    const idMaterial = request.params.idMaterial
+
+    EmpresaModel.findById(id)
+        .then((empresa) => {
+
+            empresa.negociacoes += 1
+            
+            empresa.materiais.forEach((mat, i) => {
+                if(mat._id == idMaterial) {
+                    console.log(`APAGOU - ${mat.tipoMaterial} - ${i}`)
+                    empresa.materiais[i].remove()
+                }
+            });
+
+            empresa.save()
+                .then(()=>{
+                    response.json(empresa)
+                })
+            
+        })
+}
+
 // cadastrar material
 module.exports.cadastrarMaterial = (request, response) => {
     const id = request.params.id
@@ -56,7 +64,7 @@ module.exports.cadastrarMaterial = (request, response) => {
 
             empresa.save()
                 .then(() => {
-                    console.log('novoa', empresa)
+                    console.log('novo', empresa)
                     response.json(empresa)
                 })
                 .catch(console.log)
@@ -64,5 +72,24 @@ module.exports.cadastrarMaterial = (request, response) => {
         .catch(console.log)
 
     console.log(request.body)
-    // response.json(request.body)
+}
+
+// incrementar notificações 
+module.exports.addNotificacoes = (request, response) => {
+    const id = request.params.id
+    //const idMaterial = request.params.idMaterial
+
+    EmpresaModel.findById(id)
+        .then((empresa) => {
+
+            empresa.notificacao +=1
+
+            console.log('notify--', empresa)
+            
+            empresa.save()
+            .then(()=>{
+                response.json(empresa)
+            })
+
+        });
 }

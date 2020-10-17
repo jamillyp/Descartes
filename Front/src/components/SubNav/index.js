@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import './styles.css';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux'
+
+import './styles.css';
 
 class subNav extends Component {
     render() {
@@ -41,8 +42,8 @@ class subNav extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        empresaNome: state.EmpLogadaReducer.nome,
-        artesaoNome: state.EmpLogadaReducer.nome
+        empresaNome: state.EmpLogadaReducer.nome
+        //artesaoNome: state.ArtesaoLogadoReducer.nome
     }
 }
 

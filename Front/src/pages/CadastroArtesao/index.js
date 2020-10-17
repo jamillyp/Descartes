@@ -36,14 +36,10 @@ class CadastroArtesao extends Component {
     return (
       <Container>
         <div className="cadastroArtesao">
-        <div className="idArtesao">
-
+          <div className="idArtesao">
             <div className="link-empresa">
-
-              <Link to="/CadastrarEmpresa">Quero criar cadastro empresa</Link>
-              
+              <Link to="/CadastrarEmpresa">Quero criar cadastro empresa</Link>         
             </div>
-
             <form method='' action='' onSubmit={this.onSubmit}>
               <fieldset className="Artesao">
                 <br />

@@ -1,12 +1,9 @@
 .Carousel {
-    height: 2300px;
+    height: 430px;
+    margin-top: 60px;
 }
 
 .carousel-styles{
-    position: absolute;
-    left: 10%;
-    width: 80%;
-    height: 500x;
-    top: 350px;
+    width: 100%;
     display: flex;
 }

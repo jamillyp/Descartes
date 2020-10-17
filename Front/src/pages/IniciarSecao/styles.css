@@ -5,9 +5,8 @@
     height: 700px;    
 }
 .cadastrar {
-    margin-left: 25%;
-    position: absolute;
-    top: 250px;  
+    margin-left: 30%;
+    margin-top: 250px;  
 }
 .estilo-cadastro {
     border-style: none;
@@ -27,6 +26,7 @@
     color: white;
     font-size: small;
     border: none;
+    margin-top: 30px;
 }
 
 .estilo-cadastro a{
@@ -42,4 +42,5 @@
     border-radius: 10px;
     border: none;
     font-size: small;
+    padding-left: 10px;
 }

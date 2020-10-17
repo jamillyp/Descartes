@@ -11,13 +11,11 @@ export default class Home extends Component {
   render() {
     return (
       <Container>
-        <body>
-          <Pesquisa />
-          <Carousel />
-          <Sobre />
-          <Parceiros />
-          <Loja />
-        </body>
+        <Pesquisa />
+        <Carousel />
+        <Sobre />
+        <Parceiros />
+        <Loja />
       </Container>
     );
   }

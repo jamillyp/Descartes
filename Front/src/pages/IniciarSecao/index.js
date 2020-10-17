@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './styles.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchFazerLogin } from '../../store/actions/actionLogin';
-import { Container } from 'react-bootstrap'
+import { Container } from 'react-bootstrap';
 
+import './styles.css';
 
 class logarFunc extends Component {
 
@@ -41,17 +41,17 @@ class logarFunc extends Component {
                         name="email"
                         value={this.state.email}
                         onChange={this.setValores}
-                        placeholder="    E-mail" />
+                        placeholder="E-mail" />
                         <br />
                         <input
                         type="password" 
                         name="senha"
                         value={this.state.senha}
                         onChange={this.setValores}
-                        placeholder="     Senha" />
-                        <br /><br />
+                        placeholder="Senha" />
+                        <br />
                         
-                        <Link to="/esqueciSenha">Esqueci minha senha</Link><br /><br />
+                        <Link to="/esqueciSenha" id='esqueceu'>Esqueci minha senha</Link><br />
 
                         <button type="submit">Entrar</button><br />
                     </form>

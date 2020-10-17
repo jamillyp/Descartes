@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
+
 import Home from "../pages/Home";
 import CadastroEmpresa from "../pages/CadastroEmpresa";
 import iniciarSecao from "../pages/IniciarSecao";

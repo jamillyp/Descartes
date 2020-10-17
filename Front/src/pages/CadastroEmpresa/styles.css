@@ -1,5 +1,5 @@
 .idEmpresa {
-    height: 1000px;
+    height: 900px;
     
 }
 .link-pfisica a {
@@ -7,10 +7,8 @@
     color: #D6692B;
     font-weight: bolder;
     display: flex;
-    position: absolute;
-    left: 56%;
-    position: absolute;
-    top: 145px;
+    margin-left: 59%;
+    margin-top: 180px;
 }
 .Empresa p {
     text-align: left;
@@ -22,10 +20,9 @@
     text-align: center;
     color: #352166;
     border: none;
-    width: 52%;
-    left: 23%;
-    position: absolute;
-    top: 180px;
+    width: 65%;
+    margin-left: 18%;
+    margin-top: 10px;
     height: 720px;
     border-radius: 10px;
 }
@@ -34,6 +31,9 @@
 }
 .Empresa p {
     font-size: 11px;
+}
+.Empresa input {
+    padding-left: 10px;
 }
 .enviarEmpresa {
     width: 18%;

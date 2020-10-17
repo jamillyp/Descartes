@@ -1,6 +1,10 @@
 import React from "react";
-import "./styles.css";
+import { toast } from 'react-toastify';
 import { Link } from "react-router-dom";
+
+import 'react-toastify/dist/ReactToastify.css';
+import "./styles.css";
+
 
 import logo from "../../assets/images/descarteslogo.png";
 import perfil from "../../assets/svg/perfil.svg";
@@ -9,9 +13,13 @@ import favoritos from "../../assets/svg/favoritos.svg";
 import sacola from "../../assets/svg/sacola.svg";
 import mapa from "../../assets/svg/mapa.svg";
 
-
 class Navegador extends React.Component {
   render() {
+
+    const notify = () => {
+      toast('Juliana solicitou o seu material: Papel, 30kg')
+    }
+
     return (
       <div className="Navegador">
         <div className="Navegador-principal">
@@ -34,14 +42,15 @@ class Navegador extends React.Component {
                 </Link>
               </li>
               <li>
-                <Link to={"/"}>
+                <a to="">
                   <img
                     src={notificacao}
                     alt="notificacao"
                     className="notificacao"
+                    onClick={notify}
                   />
                   Notificações
-                </Link>
+                </a>
               </li>
               <li>
                 <Link to={"/"}>

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+const bcrypt = require('bcryptjs');
 
 // esquema para cadastro Empresa
 
@@ -9,71 +9,86 @@ const empresaSchema = mongoose.Schema({
         require: true
     },
     razaoSocial: {
-        type: Number,
-        require: false
+        type: String,
+        
     },
     cnpj: {
-        type: Number,
-        require: false
+        type: String,
+        
     },
     endereco: {
         type: String,
-        require: false
+        
     },
     numero: {
         type: Number,
-        require: false
+        
     },
     complemento: {
         type: String,
-        require: false
+        
     },
     cep: {
-        type: Number,
-        require: false
+        type: String,
+        
     },
     cidade: {
         type: String,
-        require: false
+        
     },
     tel1: {
         type: String,
-        require: false
+        
     },
     tel2: {
         type: String,
-        require: false
+        
     },
     site: {
         type: String,
-        require: false
+        
     },
     email: {
         type: String,
-        require: false
+        required: true,
+        unique: true,
+        lowercase: true,
     },
     senha: {
         type: String,
-        require: false
+        required: true,
+        select: false, 
+    },
+    negociacoes: {
+        type: Number,
+        default: 0
+    },
+    notificacao: {
+        type: Number,
+        default: 0
     },
     materiais: [{
         tipoMaterial: {
             type: String,
-            require: false
         },
         qtdTam: {
-           type: Number,
-            require: false
+           type: String,
         },
         disponibilidade: {
-            type: Date,
-            require: false
+            type: String,
         },
         horario: {
             type: String,
-            require: false
         }
+
     }]
+});
+
+empresaSchema.pre('Salvo', async function(next) {
+    const hash = await bcrypt.hash(this.senha, 10);
+    this.senha =  hash;
+
+    next();
 });
 
 module.exports = mongoose.model('Empresa', empresaSchema);

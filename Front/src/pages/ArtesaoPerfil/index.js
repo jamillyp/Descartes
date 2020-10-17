@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import Pesquisa from "../../components/BarraPesquisa";
-import './styles.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchEmpresas } from '../../store/actions/actionEmpresa';
-import { Container } from 'react-bootstrap'
+import { Map, TileLayer } from 'react-leaflet';
+
+import Pesquisa from "../../components/BarraPesquisa";
+
+import './styles.css';
+import 'leaflet/dist/leaflet.css';
 
 class paginaArtesao extends Component {
 
@@ -16,7 +19,7 @@ class paginaArtesao extends Component {
         let trs = []
         for (let empresas of this.props.empresaX) {
             trs.push(
-                <tr>
+                <tr className='ListaEmpresas'>
                     <td><Link to={`/perfilEmpresaVisualizacao/${empresas._id}`}>{empresas.nome}</Link></td>
                 </tr>
             )
@@ -26,26 +29,33 @@ class paginaArtesao extends Component {
 
     render() {
         return (
-            <Container>
+            <div className="TamanhoCorpoPerfilArtesao">
                 <div className="Artesao-Perfil">
-                <Pesquisa />
-                <div className="busca-mapa">
-                    <div className="menuBusca">
-                        <br />
-                        <h3>Empresas</h3>
-                        <br />
-                        
-                        <table>
-                        {this.gerarListaEmpresas()}
-                        </table>
-
+                    <Pesquisa />
+                    <div className="busca-mapa">
+                        <div className="menuBusca">
+                            <br />
+                            <h3>Empresas</h3>
+                            <p>Listagem de empresas cadastradas</p>
+                                
+                            <table >
+                                {this.gerarListaEmpresas()}
+                            </table>
+                        </div>
+                        <div className="mapaBusca">
+                        <Map 
+                            center={[-4.9713662,-39.0188777,]}
+                            zoom={11}
+                            style={{ width:'100%', height:'100%'}} 
+                            >
+                            <TileLayer 
+                                url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+                        </Map>
+                        </div>
                     </div>
-                    <div className="mapaBusca">
-
-                    </div>
-                </div>
-            </div>
-            </Container>
+                </div> 
+        </div> 
+           
             
         )
     }

@@ -1,11 +1,14 @@
 import React from 'react';
+
+import { FooterContainer } from "./containers/footer";
 import { BrowserRouter } from 'react-router-dom';
+
 import Routes from './routes'
 import Navegador from '../src/components/Navegador';
 import Nav from '../src/components/SubNav';
-import { FooterContainer } from "./containers/footer";
 
-import './styles/Global.css'
+import './styles/Global.css';
+
 function App() {
   return (
     <div className="App">

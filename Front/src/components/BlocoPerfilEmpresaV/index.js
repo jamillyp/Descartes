@@ -1,58 +1,69 @@
 import React, { Component } from 'react';
+
 import pin1 from '../../assets/svg/pin1.svg';
 import phone1 from '../../assets/svg/phone1.svg';
 import mail1 from '../../assets/svg/mail1.svg';
 import web1 from '../../assets/svg/web1.svg';
+import selo from '../../assets/images/seloicon.png';
+import foto from '../../assets/images/perfil.png';
+
+import './styles.css';
 
 
 export class BlocoPerfilEmpresaV extends Component {
     render() {
+
         return (
-            <div>
-                <div className='PrimeiroBloco'>
-                    <div className='BlocoEsquerdo'>
-                        <section className='FotoEmpresa'>
-                            <img src='' id='LogoEmpresa' />
-                            <button>Foto</button>
+                <div className='PrimeiroBlocoV'>
+                    <div className='BlocoEsquerdoV'>
+                        <section className='FotoEmpresaV'>
+                            <img src={foto} id='LogoEmpresaV' />
                         </section>
-                        <section className='DadosEmpresa'>
-                            <h3></h3>
-                            <section className='Dados'>
-                                <p><img src={pin1} id='IconPerfilEmp' alt='Endereco' />Endereço: 
+                        <section className='DadosEmpresaV'>
+                            <h3>{this.props.empresa.nome}</h3>
+                            <section className='DadosV'>
+                                <p><img src={pin1} id='IconPerfilEmp' alt='Endereco' />
+                                Endereço: {this.props.empresa.endereco}
                                 </p>
-                                <p><img src={phone1} id='IconPerfilEmp' alt='Telefone' />Telefone: </p>
-                                <p><img src={mail1} id='IconPerfilEmp' alt='Email' />E-mail:</p>
-                                <p><img src={web1} id='IconPerfilEmp' alt='Site' />Site: </p>
+                                <p><img src={phone1} id='IconPerfilEmp' alt='Telefone' />
+                                Telefone: {this.props.empresa.tel1}</p>
+                                <p><img src={mail1} id='IconPerfilEmp' alt='Email' />
+                                E-mail: {this.props.empresa.email}</p>
+                                <p><img src={web1} id='IconPerfilEmp' alt='Site' />
+                                Site: {this.props.empresa.site}</p>
                             </section>
                         </section>
                     </div>
-                    <div className='BlocoDireita'>
-                        <section className='CabecalhoSelos'>
+                    <div className='BlocoDireitaV'>
+                        <section className='CabecalhoSelosV'>
                             <h2>Selos de sustentabilidade</h2>
-                            <img src='' id='TipoSelo' />
+                            <img src={selo} alt="selo" id='TipoSeloV' />
                         </section>
-                        <section className='TabelaSelos'>
-                            <table className='TabelSelo'>
+                        <section className='TabelaSelosV'>
+                            <table className='TabelSeloV1'>
                                 <tr>
                                     <td>Quantidade de resíduos já cadastrados:</td>
-                                    <td id='Numero'>000</td>
+                                    
+                                    <td id='NumeroV'>0</td>
                                 </tr>
-                                <p id='Linha' />
+                            </table>
+                            <p className='LinhaV' />
+                            <table className='TabelSeloV2'>
                                 <tr>
                                     <td>Quantidade de negociações realizadas:</td>
-                                    <td id='Numero'>000</td>
+                                    <td id='NumeroV'> {this.props.empresa.negociacoes}</td>
                                 </tr>
-                                <p id='Linha' />
+                            </table>
+                            <p className='LinhaV' />
+                            <table className='TabelSeloV3'>
                                 <tr>
                                     <td>Selos conquistados:</td>
-                                    <td id='Numero'>1000</td>
+                                    <td id='NumeroV'>100</td>
                                 </tr>
                             </table>
                         </section>
                     </div> 
                 </div>
-                <div></div>
-            </div>
         )
     }
 }

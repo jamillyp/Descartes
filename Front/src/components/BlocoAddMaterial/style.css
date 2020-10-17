@@ -1,41 +1,12 @@
-.TabelaSelos {
-    color:  #352166;
-    margin: 0 0 0 10px;
-}
-
-.TabelaSelos tr td {
-    padding: 15px 40px 10px 0;
-    font-size: 14px;
-}
-
-p#Linha {
-    width: 250px;
-    border-top: 2px solid #352166;
-}
-
-td#Numero {
-    padding: 0 0 0 10px;
-    font-size: 16pt;;
-}
-
 .SegundoBloco {
-    position: absolute;
     background-color: #EDCB59;
-    margin-top: 450px;
+    margin-top: 30px;
     border-radius: 10px;
-    top: 180px;
-    width: 25%;
-
+    width: 340px;
 }
 
 .BlocoAmarelo {
     padding: 30px;
-}
-
-
-.CabecalhoBlAmarelo {
-    margin: 0 0 10px 0;
-    color: #352166;
 }
 
 p#Divisoria {
@@ -43,7 +14,8 @@ p#Divisoria {
 }
 
 .CorpoBlAmarelo p {
-    padding: 10px 0 5px 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 input#txtCadTipo {
@@ -63,24 +35,25 @@ input#txtCadQnt {
 }
 
 input#Data {
+    width: 160px;
     height: 30px;
     border-radius: 3px;
-    border: transparent;
     padding-left: 5px;
-    color: rgb(100, 100, 100);
+    border: transparent;
+    margin-right: 10px;
 }
 
 input#Hora {
+    width: 100px;
     height: 30px;
     border-radius: 3px;
-    border: transparent;
-    margin-left: 18px;
     padding-left: 5px;
+    border: transparent;
 }
 
 p#BotaoCadastrar {
     margin-top: 20px;
-    margin-left: 185px;
+    margin-left: 175px;
 }
 
 button#BotaoCad {

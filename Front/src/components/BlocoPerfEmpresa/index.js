@@ -1,21 +1,46 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
+import ProfilePicture from "profile-picture";
+import "profile-picture/build/ProfilePicture.css";
 import './style.css';
+
 import pin1 from '../../assets/svg/pin1.svg';
 import phone1 from '../../assets/svg/phone1.svg';
 import mail1 from '../../assets/svg/mail1.svg';
 import web1 from '../../assets/svg/web1.svg';
-import { connect } from 'react-redux';
-import { Container } from 'react-bootstrap'
+import selo from '../../assets/images/seloicon.png';
+
+
+
 
 export class BlocoPerfEmpresa extends React.Component{
+
+    constructor(props) {
+        super(props)
+        this.profilePictureRef = React.createRef();
+    }
+    
+    handleUpload() {
+        const PP = this.profilePicture.current;
+        const imageData = PP.getData();
+        const file = imageData.file;
+        const imageAsDataURL = PP.getImageAsDataUrl();
+    }
+
     render() {
         return (
-            <Container>
-                <div className='PrimeiroBloco'>
+            <div className='PrimeiroBloco'>
                 <div className='BlocoEsquerdo'>
                     <section className='FotoEmpresa'>
-                        <img src='' id='LogoEmpresa' />
-                        <button>Foto</button>
+
+                    <ProfilePicture
+                        ref={this.profilePictureRef}
+                        useHelper={true}
+                        debug={true}
+                    />
+                    <button className="buttonAtualizar" onClick={this.handleUpload.bind(this)}>Atualizar</button>
+
                     </section>
                     <section className='DadosEmpresa'>
                         <h3>{this.props.empresa.nome}</h3>
@@ -28,35 +53,39 @@ export class BlocoPerfEmpresa extends React.Component{
                             <p><img src={mail1} id='IconPerfilEmp' alt='Email' />E-mail: {' ' + this.props.empresa.email}</p>
                             <p><img src={web1} id='IconPerfilEmp' alt='Site' />Site: {' ' + this.props.empresa.site}</p>
                         </section>
+                        <button id='BotaoEditPerfil'>Editar perfil</button>
                     </section>
-                    <section className='BotaoEditar'><button id='BotaoEditPerfil'><b>Editar perfil</b></button></section>
                 </div>
                 <div className='BlocoDireita'>
                     <section className='CabecalhoSelos'>
                         <h2>Selos de sustentabilidade</h2>
-                        <img src='' id='TipoSelo' />
+                        <img src={selo} alt="selo" id='TipoSelo' />
                     </section>
                     <section className='TabelaSelos'>
-                        <table className='TabelSelo'>
+                        <table className='TabelSelo1'>
                             <tr>
                                 <td>Quantidade de resíduos já cadastrados:</td>
-                                <td id='Numero'>000</td>
+                                <td id='Numero'>{this.props.empresa.notificao}</td>
                             </tr>
-                            <p id='Linha' />
+                        </table>
+                        <p id='LinhaT' />
+                        <table className='TabelSelo2'>
                             <tr>
                                 <td>Quantidade de negociações realizadas:</td>
-                                <td id='Numero'>000</td>
+                                <td id='Numero'>{this.props.empresa.negociacoes}</td>
                             </tr>
-                            <p id='Linha' />
+                        </table>
+                        <p id='LinhaT' />
+                        <table className='TabelSelo3'>
                             <tr>
                                 <td>Selos conquistados:</td>
-                                <td id='Numero'>1000</td>
+                                <td id='Numero'>100</td>
                             </tr>
                         </table>
                     </section>
-                </div> 
-            </div>
-            </Container> 
+            </div> 
+            
+        </div>
         )
     }
 }

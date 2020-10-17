@@ -1,12 +1,9 @@
+.TamanhoCorpoParc {
+    height: 550px;
+}
 .pagina3 {
-    position: absolute;
-    left: 10%;
-    width: 81%;
-    height: 732px;
-    top: 1350px;
+    width: 100%;
     text-align: center;
-
-
 }
 .cards{
     display: flex;
@@ -17,7 +14,6 @@
 .fundo {
     width: 300px;
     height: 400px;
-    left: 255px;
     top: 1711px;
     background: #352166;
     border-radius: 10px;
@@ -33,11 +29,17 @@
     color: white;
     text-align: left;
     margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
 }
 .cards h3{
     color: #352166;
+    font-size: 15pt;
+    margin-top: 20px;
+    margin-bottom: -20px;
 }
 .titulo h1 {
+    font-size: 26pt;
     color: #D6692B;
 }
 .cards img{

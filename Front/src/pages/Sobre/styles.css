@@ -1,9 +1,9 @@
+.TamanhoCorpoSobre {
+    height: 600px;
+    width: 100%;
+}
+
 .sobre {
-    position: absolute;
-    left: 10%;
-    width: 80%;
-    height: 650px;
-    top: 750px;
     display: flex;
     justify-content: space-between;
     color: #D6692B;
@@ -12,9 +12,6 @@
     padding: 10px;
 }
 .sobre-titulo {
-    position: absolute;
-    top: 750px;
-    margin-left: 15%;
     text-align: center;
     color:#D6692B ;
     
@@ -29,20 +26,15 @@
 .sobre h4 {
     color: #352166;
 }
-.sobre a{
-    text-decoration-style: none;
-    text-decoration: none;
-    list-style: none;
-    color:#D6692B ;
-}
 .texto-sobre {
     margin-right: 20px;
 }
 .texto-sobre img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    margin-right: 5px;
+    margin-top: -18px;
 }
 .video {
     height: auto;
-    width: 72%;
+    width: auto;
 }

@@ -1,5 +1,5 @@
 .idArtesao {
-    height: 900px;
+    height: 800px;
     
 }
 .link-empresa a {
@@ -7,9 +7,8 @@
     color: #D6692B;
     font-weight: bolder;
     display: flex;
-    position: absolute;
-    left: 58.2%;
-    top: 145px;
+    margin-left: 62%;
+    margin-top: 180px;
 }
 .Artesao p {
     text-align: left;
@@ -21,12 +20,14 @@
     text-align: center;
     color: #352166;
     border: none;
-    width: 52%;
-    left: 23%;
-    position: absolute;
-    top: 180px;
+    width: 65%;
+    margin-left: 18%;
+    margin-top: 10px;
     height: 640px;
     border-radius: 10px;
+}
+.Artesao input {
+    padding-left: 10px;
 }
 .Artesao h2{
     color: #352166;

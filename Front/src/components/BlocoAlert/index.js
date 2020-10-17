@@ -1,11 +1,10 @@
 import React from 'react';
+
 import './styles.css';
-import { Container } from 'react-bootstrap';
 
 class BlocoAlert extends React.Component {
     render() {
         return (
-            <Container>
                 <div className='BlocoAlert'>
                     <section className='BlFundo1'>
                         <section className='TextosBlFundo'>
@@ -26,7 +25,6 @@ class BlocoAlert extends React.Component {
                         </section>
                     </section>
                 </div>
-            </Container>
         )
     }
 }

@@ -7,10 +7,12 @@ export const Container = styled.div`
 `
 
 export const Wrapper = styled.div`
+    text-align: center;
     display: flex;
     justify-content: center;
     max-width: 1000px;
-    margin-left: 80px;
+    margin-left: 20%;
+    margin-right: 25%;
 `
 export const Column = styled.div`
     display: flex;

@@ -4,7 +4,6 @@ import { fazerLogin } from '../actions/actionLogin'
 
 const INITIAL_STATE = {}
 
-
 const loginReducer = createReducer(INITIAL_STATE, 
     {
         [fazerLogin.type]: (state, action) => {

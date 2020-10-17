@@ -1,9 +1,9 @@
 import React from 'react';
+
 import './style.css';
+
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom'
 import { fetchCadastrarMaterial } from '../../store/actions/actionCadastroM';
-import { Container } from 'react-bootstrap';
 
 
 class BlocoAddMaterial extends React.Component{
@@ -33,8 +33,7 @@ class BlocoAddMaterial extends React.Component{
 
     render() {
         return (
-            <Container>
-                <div className='AddMaterial'>
+            <div className='AddMaterial'>
                 <div className='SegundoBloco'>
                     <div className='BlocoAmarelo'>
                         <section className='CabecalhoBlAmarelo'>
@@ -50,7 +49,7 @@ class BlocoAddMaterial extends React.Component{
                             placeholder="Digite o tipo de material"
                             value={this.state.tipoMaterial}
                             onChange={this.setDados} />
-                            <p> Quantidade / Tamanho </p>
+                            <p>Quantidade / Tamanho</p>
                             <input 
                             type="text" 
                             name="qtdTam" 
@@ -69,7 +68,7 @@ class BlocoAddMaterial extends React.Component{
                             type="time" 
                             name="horario" 
                             id="Hora" 
-                            min="09:00" 
+                            min="07:00" 
                             max="18:00" 
                             required
                             value={this.state.horario} 
@@ -79,7 +78,6 @@ class BlocoAddMaterial extends React.Component{
                     </div>
                 </div>
             </div>
-            </Container>
             
         );
     }

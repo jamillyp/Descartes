@@ -1,23 +1,34 @@
+.TamanhoCorpoPerfilArtesao {
+    height: 700px;
+    width: 100%;
+}
 .Artesao-Perfil {
-    height: 1000px;
+
+    margin-left: 10%;
+    width: 80%;
 }
 .busca-mapa {
     display: flex;
-    position: absolute;
-    width: 80%;
+    justify-content: space-between;
+    color: #D6692B;
+    font-size: 13.5px;
+    align-items: center;
+    padding: 10px;
     top: 350px;
-    left: 10%;
 }
 .mapaBusca {
     background-color: rgb(235, 234, 232);
     width: 80%;
     height: 400px;
+    margin-top: 40px;
 }
 .menuBusca {
     width: 30%;
     background-color: #352166;
     height: 400px;
     border-radius: 10px;
+    padding-bottom: 15px;
+    margin-top: 40px;
    
 }
 .menuBusca h3 {
@@ -26,7 +37,7 @@
 }
 .menuBusca p {
     color: white;
-    margin-left: 20px
+    margin-left: 20px;
 }
 .menuBusca table {
     
@@ -34,7 +45,7 @@
     color:#352166;
     margin-left: 10px ;
     border-radius: 10px;
-    height: 73%;
+    height: calc(95% - 20px - 5em);
     width: 93%;
 
 }
@@ -43,3 +54,7 @@
     font-weight: bolder;
     margin-top: 10px;
 }
+.ListaEmpresas td {
+    padding: 10px;
+}
+

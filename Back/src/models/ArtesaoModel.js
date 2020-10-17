@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
 
 // esquema para cadastro Pessoa física
 const pessoafSchema = mongoose.Schema({
@@ -7,7 +8,7 @@ const pessoafSchema = mongoose.Schema({
         require: true
     },
     cpf: {
-        type: Number,
+        type: String,
     },
     dataNasc: {
         type: String,
@@ -22,7 +23,7 @@ const pessoafSchema = mongoose.Schema({
         type: String,
     },
     cep: {
-        type: Number,
+        type: String,
     },
     cidade: {
         type: String,
@@ -35,10 +36,23 @@ const pessoafSchema = mongoose.Schema({
     },
     email: {
         type: String,
+        required: true,
+        unique: true,
+        lowercase: true,
     },
     senha: {
         type: String,
+        required: true,
+        select: false,
+        
     }
+});
+
+pessoafSchema.pre('Salvo', async function(next) {
+    const hash = await bcrypt.hash(this.senha, 10);
+    this.senha =  hash;
+
+    next();
 });
 
 module.exports = mongoose.model('Pessoaf', pessoafSchema);

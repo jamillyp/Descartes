@@ -1,0 +1,94 @@
+.PrimeiroBlocoV {
+    display: inline-flex;
+    margin-top: 170px;
+}
+
+.BlocoEsquerdoV {
+    display: inline-flex;
+    background-color: #352166;
+    padding: 40px;
+    border-radius: 10px 0 0 10px;
+    width: 57%;
+}
+
+.FotoEmpresaV {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 20px 30px 20px 20px;
+}
+
+img#LogoEmpresaV {
+    width: 220px;
+    height: 220px;
+    border-radius: 0 10px 0 0;
+    background-color: rgb(131, 131, 131);
+}
+
+.DadosEmpresaV h3 {
+    margin: 0px 0 20px 05px;
+    padding-top: 20px;
+    color: #f1f1f1;
+}
+
+.DadosV {
+    margin-top: 15px;
+}
+
+.DadosEmpresaV p {
+    margin: 10px 10px 5px 10px;
+    color: #f1f1f1;
+    font-size: 14px;
+    width: 500px;
+}
+
+img#IconPerfilEmp {
+    margin: 0 10px 12px 0;
+}
+
+.BlocoDireitaV {
+    background-color: #48B9A3;
+    padding: 40px;
+    border-radius: 0 10px 10px 0;
+    width: 30%;
+}
+
+.CabecalhoSelosV {
+    display: inline-flex;
+    color:  #352166;
+    margin-left: 10px;
+}
+
+.CabecalhoSelosV h2 {
+    font-size: 18pt;
+    margin: 10px 0 0 0;
+}
+
+img#TipoSeloV {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-left: 50px;
+}
+
+.TabelaSelosV {
+    margin-top: 30px;
+}
+
+.LinhaV {
+    border-top: 2px solid #352166;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#NumeroV {
+    font-size: 15pt;
+    padding-left: 40px;
+}
+
+.TabelSeloV2 #NumeroV {
+    padding-left: 42px;
+}
+
+.TabelSeloV3 #NumeroV {
+    padding-left: 178px;
+}
